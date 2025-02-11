@@ -1,6 +1,7 @@
 # School These Sh*ts
 
 ![Game Screenshot](https://dakillerxd.github.io/github/content/games/school-these-shits/main.png)
+
 [Itch Link]([#](https://danielnoam.itch.io/school-these-shts)) <!-- Add your game link here -->
 
 ## Overview
@@ -22,6 +23,7 @@
 
 
 ## Development Insights
+
 - Through extensive playtesting, refined gameplay mechanics and time pressure to balance challenge, accessibility, and enjoyment.
 - Successfully managed project scope to deliver a complete game within academic deadlines.
 - Created modular systems for student behaviors and obstacles to enable quick iteration and testing.
