@@ -28,11 +28,8 @@
 
 
 ## Development Insights
-- Time-pressured gameplay encouraging mastery of movement, accuracy, and route optimization.
-- Multiple difficulty levels allowing players to learn mechanics while providing increasing challenge​​​​​​​.
-- 
-- Through extensive playtesting, refined gameplay mechanics and time pressure to balance challenge, accessibility, and enjoyment.
-- Successfully managed project scope to deliver a complete game within academic deadlines.
+- Through extensive playtesting, refined gameplay mechanics and time pressure to balance challenge, accessibility, and enjoyment.
+- Successfully managed project scope to deliver a complete game within academic deadlines.
 - Created modular systems for student behaviors and obstacles to enable quick iteration and testing.
 - Designed intuitive movement and throwing mechanics that feel satisfying while remaining simple to learn.
 - Implemented an audio system with distinct sound cues and triggers to provide player feedback and enhance the game's atmosphere
