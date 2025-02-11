@@ -1,9 +1,14 @@
+<div class="page-content">
+
 # School These Sh*ts
 
 ![Game Screenshot](https://dakillerxd.github.io/github/content/games/school-these-shits/main.png)
 
 [Itch Link]([#](https://danielnoam.itch.io/school-these-shts)) <!-- Add your game link here -->
 
+
+<div class="project-card">
+  
 ## Overview
 "School These Sh*ts" is a fast-paced "shooter" where players take on the role of an unconventional teacher. Armed with textbooks as projectiles and momentum-based movement, the player must race against time to help students overcome various obstacles and achieve a 70% class success rate before the bell rings. The game combines precision throwing mechanics with strategic time management across a diverse school environment.
 
