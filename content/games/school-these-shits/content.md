@@ -28,7 +28,9 @@
 
 
 ## Development Insights
-- Successfully managed project scope to deliver a complete game within academic deadlines.
+- Time-pressured gameplay encouraging mastery of movement, accuracy, and route optimization.
+- Multiple difficulty levels allowing players to learn mechanics while providing increasing challenge​​​​​​​.
+- 
 - Through extensive playtesting, refined gameplay mechanics and time pressure to balance challenge, accessibility, and enjoyment.
 - Successfully managed project scope to deliver a complete game within academic deadlines.
 - Created modular systems for student behaviors and obstacles to enable quick iteration and testing.
