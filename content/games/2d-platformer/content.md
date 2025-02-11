@@ -62,14 +62,14 @@
     </figure>
     <figure>
         <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/Physics1.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/Physics1.gif" alt="Coyote jump">
-            <figcaption>Coyote jump</figcaption>
+            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/Physics1.gif" alt="Predictable movement">
+            <figcaption>Predictable movement</figcaption>
         </a>
     </figure>
     <figure>
         <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/Physics2.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/Physics2.gif" alt="Coyote jump">
-            <figcaption>Coyote jump</figcaption>
+            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/Physics2.gif" alt="Player acceleration">
+            <figcaption>Player acceleration</figcaption>
         </a>
     </figure>
 </div>
