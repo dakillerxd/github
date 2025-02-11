@@ -2,7 +2,7 @@
 
 # School These Sh*ts
 
-![Game Screenshot](https://dakillerxd.github.io/portfolio/content/games/school-these-shits/main.png)
+![Game Screenshot](https://dakillerxd.github.io/portfolio/assets/games/school-these-shits/main.png)
 
 [Play on Itch.io](https://danielnoam.itch.io/school-these-shts)
 
@@ -49,6 +49,6 @@
 ## Gallery
 
 <div class="image-gallery">
-    <img src="./gameplay1.png" alt="Gameplay showing book throwing mechanic">
-    <img src="./gameplay2.png" alt="Classroom environment">
+    <img src="https://dakillerxd.github.io/portfolio/assets/games/school-these-shits/gameplay1.png" alt="Gameplay showing book throwing mechanic">
+    <img src="https://dakillerxd.github.io/portfolio/assets/games/school-these-shits/gameplay2.png" alt="Classroom environment">
 </div>
