@@ -63,6 +63,17 @@ main {
     margin-left: var(--sidebar-width);
     padding: 2rem;
     flex-grow: 1;
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 250px;
+}
+
+#content {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
 section {
@@ -72,11 +83,90 @@ section {
 h1 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin: 2rem 0 1rem 0;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.3rem;
+    margin: 1.5rem 0 1rem 0;
+    text-align: center;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
 img {
     max-width: 100%;
     height: auto;
+    display: block;
+    margin: 2rem auto;
     border-radius: 4px;
-    margin: 1rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+ul, ol {
+    max-width: 600px;
+    margin: 1rem auto;
+    padding-left: 2rem;
+    text-align: left;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+a {
+    color: #4a9eff;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #77b6ff;
+}
+
+/* For code blocks if you have any */
+code {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-family: monospace;
+}
+
+/* For blockquotes if you need them */
+blockquote {
+    border-left: 4px solid var(--text-gray);
+    margin: 1.5rem auto;
+    padding-left: 1rem;
+    max-width: 600px;
+    color: var(--text-gray);
+    font-style: italic;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+    
+    main {
+        padding-left: 200px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
 }
