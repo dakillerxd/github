@@ -1,14 +1,15 @@
 <div class="page-content">
+    
 # Pixel Knight
 
-<figure>
-    <a href="https://dakillerxd.github.io/portfolio/assets/pixel-knight/main.png" target="_blank">
-        <img src="https://dakillerxd.github.io/portfolio/assets/pixel-knight/main.png" alt="Game Screenshot">
-        <figcaption>Game Screenshot</figcaption>
-    </a>
-</figure>
+
+<a href="https://dakillerxd.github.io/portfolio/assets/pixel-knight/main.png" target="_blank">
+    <img src="https://dakillerxd.github.io/portfolio/assets/pixel-knight/main.png" alt="Game Screenshot">
+</a>
+
 
 <div class="project-card">
+    
 ## Overview
 "Pixel Knight" is a short Action-RPG developed during my high school years while learning Game Maker. The game features dynamic combat, resource management, and a diverse roster of enemies and bosses.
 </div>
