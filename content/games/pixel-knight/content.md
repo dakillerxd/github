@@ -49,7 +49,9 @@ Developing this project provided me hands-on experience with the core aspects of
 </div>
 
 <div class="project-card">
+    
 ## Gallery
+
 <div class="image-gallery">
      <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay1.gif" alt="Gameplay showing book throwing mechanic">
     <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay4.gif" alt="Gameplay showing book throwing mechanic">
