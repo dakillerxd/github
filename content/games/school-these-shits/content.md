@@ -4,7 +4,7 @@
 
 ![Game Screenshot](https://dakillerxd.github.io/github/content/games/school-these-shits/main.png)
 
-[Itch Link]([(https://danielnoam.itch.io/school-these-shts)]) <!-- Add your game link here -->
+[Itch Link](https://danielnoam.itch.io/school-these-shts) <!-- Add your game link here -->
 
 
 <div class="project-card">
