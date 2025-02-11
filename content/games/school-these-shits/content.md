@@ -2,12 +2,12 @@
     
 # School These Sh*ts
 
-<figure>
-    <a href="https://dakillerxd.github.io/portfolio/assets/school-these-shits/main.png" target="_blank">
-        <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/main.png" alt="Game Screenshot">
-        <figcaption>Game Screenshot</figcaption>
-    </a>
-</figure>
+
+<a href="https://dakillerxd.github.io/portfolio/assets/school-these-shits/main.png" target="_blank">
+    <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/main.png" alt="Game Screenshot">
+    <figcaption>Game Screenshot</figcaption>
+</a>
+
 
 [Play on Itch.io](https://danielnoam.itch.io/school-these-shts)
 
@@ -28,32 +28,32 @@
 <div class="image-gallery">
     <figure>
         <a href="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay2.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay2.gif" alt="gameplay2">
-            <figcaption>gameplay2</figcaption>
+            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay2.gif" alt="Various shortcuts">
+            <figcaption>Various shortcuts</figcaption>
         </a>
     </figure>
     <figure>
         <a href="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay3.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay3.gif" alt="gameplay3">
-            <figcaption>gameplay3</figcaption>
+            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay3.gif" alt="Some objects can break">
+            <figcaption>Some objects can break</figcaption>
         </a>
     </figure>
     <figure>
         <a href="https://dakillerxd.github.io/portfolio/assets/school-these-shits/trickshot.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/trickshot.gif" alt="gameplay5">
-            <figcaption>gameplay5</figcaption>
+            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/trickshot.gif" alt="Trickshots!">
+            <figcaption>Trickshots!</figcaption>
         </a>
     </figure>
     <figure>
         <a href="https://dakillerxd.github.io/portfolio/assets/school-these-shits/mission1.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/mission1.gif" alt="gameplay6">
-            <figcaption>gameplay6</figcaption>
+            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/mission1.gif" alt="Student's mission">
+            <figcaption>Student's mission</figcaption>
         </a>
     </figure>
     <figure>
         <a href="https://dakillerxd.github.io/portfolio/assets/school-these-shits/mission2.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/mission2.gif" alt="gameplay7">
-            <figcaption>gameplay7</figcaption>
+            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/mission2.gif" alt="Student's mission">
+            <figcaption>Student's mission</figcaption>
         </a>
     </figure>
 </div>
