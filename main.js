@@ -33,6 +33,12 @@ function buildNavigation() {
     aboutLink.textContent = "About";
     aboutLink.onclick = () => loadContent('content/about/content.md');
     nav.appendChild(aboutLink);
+
+    // Add resume link
+    const aboutLink = document.createElement('a');
+    aboutLink.textContent = "Resume";
+    aboutLink.onclick = () => loadContent('content/about/resume.pdf');
+    nav.appendChild(aboutLink);
     
     // Add sections with headers
     for (const [section, content] of Object.entries(structure)) {
