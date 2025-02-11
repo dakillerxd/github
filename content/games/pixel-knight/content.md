@@ -53,7 +53,8 @@ Developing this project provided me hands-on experience with the core aspects of
 ## Gallery
 
 <div class="image-gallery">
-     <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay1.gif" alt="Gameplay showing book throwing mechanic">
-    <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay4.gif" alt="Gameplay showing book throwing mechanic">
+     <img src="https://dakillerxd.github.io/portfolio/assets/pixel-knight/gameplay1.gif" alt="Gameplay showing book throwing mechanic">
+     <img src="https://dakillerxd.github.io/portfolio/assets/pixel-knight/gameplay2.gif" alt="Gameplay showing book throwing mechanic">
+     <img src="https://dakillerxd.github.io/portfolio/assets/pixel-knight/gameplay3.gif" alt="Gameplay showing book throwing mechanic">
 </div>
 </div>
