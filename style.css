@@ -186,18 +186,21 @@ main {
     grid-template-columns: repeat(3, 1fr);
     row-gap: 1rem;    /* Vertical gap between rows */
     column-gap: 1rem; /* Horizontal gap between columns */
-    margin: 1rem auto;  /* Changed from '1rem 0' to '1rem auto' */
-    max-width: fit-content; /* This ensures the grid is only as wide as its content */
+    margin: 1rem auto;  /* Center the gallery horizontally */
+    max-width: fit-content; /* Ensure grid is only as wide as content */
+    justify-content: center; /* Center grid items horizontally */
+    justify-items: center; /* Center items within their grid cells */
 }
 
 .image-gallery img {
     width: 100%;
-    height: auto; /* Changed from fixed height */
+    height: auto;
     min-height: 200px;
-    object-fit: contain; /* Changed from cover to contain */
+    object-fit: contain;
     border-radius: 8px;
     transition: transform 0.2s;
-    background-color: rgba(0, 0, 0, 0.2); /* Added background for contrast */
+    background-color: rgba(0, 0, 0, 0.2);
+    max-width: 300px; /* Add a max-width to control image size */
 }
 
 .image-gallery img:hover {
