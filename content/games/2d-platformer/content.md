@@ -84,6 +84,39 @@
 
 <div class="image-gallery">
     <figure>
+        <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/movingplatform.gif" target="_blank">
+            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/movingplatform.gif" alt="Moving platform">
+            <figcaption>Moving platform</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/softPlatform.gif" target="_blank">
+            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/softPlatform.gif" alt="Soft platform">
+            <figcaption>Soft platform</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/crublingobject.gif" target="_blank">
+            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/crublingobject.gif" alt="Crumbling platform">
+            <figcaption>Crumbling platform</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/spikes.gif" target="_blank">
+            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/spikes.gif" alt="Spikes">
+            <figcaption>Spikes</figcaption>
+        </a>
+    </figure>
+</div>
+
+### Level Design and Progression
+
+- Carefully crafted levels that gradually introduce new mechanics and challenges.
+- Fake walls and hidden areas that reward exploration and encourage players to search for secrets.
+- Balanced difficulty curve that keeps players engaged and motivated to improve their skills.
+
+<div class="image-gallery">
+    <figure>
         <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/Hazard2.gif" target="_blank">
             <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/Hazard2.gif" alt="Double jump">
             <figcaption>Double jump</figcaption>
@@ -113,25 +146,14 @@
             <figcaption>Coyote jump</figcaption>
         </a>
     </figure>
-    <figure>
-        <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/movingplatform.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/movingplatform.gif" alt="Moving platform">
-            <figcaption>Moving platform</figcaption>
-        </a>
-    </figure>
-    <figure>
-        <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/softPlatform.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/softPlatform.gif" alt="Soft platform">
-            <figcaption>Soft platform</figcaption>
-        </a>
-    </figure>
 </div>
 
-### Level Design and Progression
 
-- Carefully crafted levels that gradually introduce new mechanics and challenges.
-- Fake walls and hidden areas that reward exploration and encourage players to search for secrets.
-- Balanced difficulty curve that keeps players engaged and motivated to improve their skills.
+### Camera
+
+- Camera smoothly follows the player's movement and adjusts based on their position and velocity.
+- Intelligent camera positioning ensures optimal visibility of the player's surroundings.
+- Smooth camera transitions between different areas of the level create a seamless gameplay experience.
 
 <div class="image-gallery">
     <figure>
@@ -156,28 +178,6 @@
         <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/camera4.gif" target="_blank">
             <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/camera4.gif" alt="Soft platform">
             <figcaption>Soft platform</figcaption>
-        </a>
-    </figure>
-</div>
-
-
-### Camera
-
-- Camera smoothly follows the player's movement and adjusts based on their position and velocity.
-- Intelligent camera positioning ensures optimal visibility of the player's surroundings.
-- Smooth camera transitions between different areas of the level create a seamless gameplay experience.
-
-<div class="image-gallery">
-    <figure>
-        <a href="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay1.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay1.gif" alt="Gameplay showing book throwing mechanic">
-            <figcaption>Camera movement and positioning</figcaption>
-        </a>
-    </figure>
-    <figure>
-        <a href="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay4.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay4.gif" alt="Gameplay showing book throwing mechanic">
-            <figcaption>Dynamic camera transitions</figcaption>
         </a>
     </figure>
 </div>
