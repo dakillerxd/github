@@ -96,8 +96,8 @@
         </a>
     </figure>
     <figure>
-        <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/crublingobject.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/crublingobject.gif" alt="Crumbling platform">
+        <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/crumblingobject.gif" target="_blank">
+            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/crumblingobject.gif" alt="Crumbling platform">
             <figcaption>Crumbling platform</figcaption>
         </a>
     </figure>
@@ -118,14 +118,14 @@
 <div class="image-gallery">
     <figure>
         <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/Hazard2.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/Hazard2.gif" alt="Double jump">
-            <figcaption>Double jump</figcaption>
+            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/Hazard2.gif" alt="Platforming puzzle">
+            <figcaption>Platforming puzzle</figcaption>
         </a>
     </figure>
     <figure>
         <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/Hazard3.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/Hazard3.gif" alt="Wall slide">
-            <figcaption>Wall slide</figcaption>
+            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/Hazard3.gif" alt="Unique level mechanics">
+            <figcaption>Unique level mechanics</figcaption>
         </a>
     </figure>
     <figure>
@@ -136,14 +136,14 @@
     </figure>
     <figure>
         <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/hazard1.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/hazard1.gif" alt="Variable jump height">
-            <figcaption>Variable jump height</figcaption>
+            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/hazard1.gif" alt="Platforming puzzle">
+            <figcaption>Platforming puzzle</figcaption>
         </a>
     </figure>
     <figure>
         <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/hazard4.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/hazard4.gif" alt="Coyote jump">
-            <figcaption>Coyote jump</figcaption>
+            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/hazard4.gif" alt="Platforming puzzle">
+            <figcaption>Platforming puzzle</figcaption>
         </a>
     </figure>
 </div>
