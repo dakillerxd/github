@@ -14,7 +14,7 @@ const structure = {
     "PROTOTYPES/GAMEJAMS": {
         path: "content/prototypes",
         pages: [
-            { title: "Bubblerena", folder: "bubblerena" },
+            { title: "Bubblerena - GGJ 2025", folder: "bubblerena" },
             { title: "Fruit Ninja Clone", folder: "fruit-ninja-clone" }
         ]
     },
