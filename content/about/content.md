@@ -9,7 +9,9 @@ I'm a Game Designer and Programmer who began my journey in game development duri
 
 
 
-These are some of my game projects that demonstrate my skills and creativity in game development.
+
+
+
 
 <div class="image-gallery">
     <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay1.png" alt="Gameplay showing book throwing mechanic">
