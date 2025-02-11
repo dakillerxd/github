@@ -2,7 +2,7 @@
 
 # 2D Platformer
 
-![Game Screenshot](https://dakillerxd.github.io/portfolio/assets/2d-platformer/main.png)
+![Game Screenshot](https://dakillerxd.github.io/portfolio/assets/2d-platformer/main.gif)
 
 [Play on Itch.io]()
 
