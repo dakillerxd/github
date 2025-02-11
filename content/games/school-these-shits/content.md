@@ -28,7 +28,7 @@
 
 
 ## Development Insights
-
+- Successfully managed project scope to deliver a complete game within academic deadlines.
 - Through extensive playtesting, refined gameplay mechanics and time pressure to balance challenge, accessibility, and enjoyment.
 - Successfully managed project scope to deliver a complete game within academic deadlines.
 - Created modular systems for student behaviors and obstacles to enable quick iteration and testing.
