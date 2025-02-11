@@ -232,6 +232,7 @@ image-gallery figcaption {
     transition: opacity 0.2s;
     white-space: nowrap;
     pointer-events: none;
+    text-align: center;
     z-index: 1;
 }
 
