@@ -12,6 +12,7 @@
 
 "School These Sh*ts" is a fast-paced "shooter" where players take on the role of an unconventional teacher. Armed with textbooks as projectiles and momentum-based movement, the player must race against time to help students overcome various obstacles and achieve a 70% class success rate before the bell rings. The game combines precision throwing mechanics with strategic time management across a diverse school environment.
 
+</div>
 <div class="project-card">
     
 ## Core Design Elements
@@ -32,6 +33,7 @@
 - Time-pressured gameplay encouraging mastery of movement, accuracy, and route optimization
 - Multiple difficulty levels allowing players to learn mechanics while providing increasing challenge
 
+</div>
 <div class="project-card">
 ## Development Insights
 
