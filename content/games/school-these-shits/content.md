@@ -5,7 +5,6 @@
 
 <a href="https://dakillerxd.github.io/portfolio/assets/school-these-shits/main.png" target="_blank">
     <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/main.png" alt="Game Screenshot">
-    <figcaption>Game Screenshot</figcaption>
 </a>
 
 
