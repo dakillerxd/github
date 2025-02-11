@@ -35,6 +35,7 @@
 
 </div>
 <div class="project-card">
+    
 ## Development Insights
 
 - Through extensive playtesting, refined gameplay mechanics and time pressure to balance challenge, accessibility, and enjoyment
