@@ -208,6 +208,31 @@ main {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
+.image-gallery figure:hover figcaption {
+    opacity: 1;
+}
+
+.image-gallery figcaption {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: opacity 0.2s;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.image-gallery figure {
+    position: relative;
+    margin: 0;
+}
+
 /* Error message styling */
 .error-message {
     text-align: center;
