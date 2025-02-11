@@ -14,8 +14,8 @@ I'm a Game Designer and Programmer who began my journey in game development duri
 
 
 <div class="image-gallery">
-    <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/main.png" alt="Gameplay showing book throwing mechanic">
-    <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/main.png" alt="Classroom environment">
+    <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/main.gif" alt="2D Platformer">
+    <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/main.png" alt="School These Sh*ts">
 </div>
 
 
