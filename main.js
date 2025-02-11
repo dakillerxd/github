@@ -27,13 +27,13 @@ const structure = {
 function buildNavigation() {
     const nav = document.getElementById('main-nav');
     
-    // Add About link separately without a header
+    // Add About link first, without a header
     const aboutLink = document.createElement('a');
     aboutLink.textContent = "About";
     aboutLink.onclick = () => loadContent('content/about/content.md');
     nav.appendChild(aboutLink);
     
-    // Add other sections with headers
+    // Add sections with headers
     for (const [section, content] of Object.entries(structure)) {
         const header = document.createElement('h2');
         header.textContent = section;
