@@ -15,13 +15,13 @@ I'm a Game Designer and Programmer who began my journey in game development duri
 
 <div class="image-gallery">
         <figure>
-        <a href="https://dakillerxd.github.io/portfolio/content/games/2d-platformer/content.md">
+        <a href="#" onclick="loadContent('/portfolio/content/games/2d-platformer/content.md'); return false;">
             <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/main.gif" alt="2D Platformer">
             <figcaption>2D Platformer</figcaption>
         </a>
         </figure>
         <figure>
-        <a href="https://dakillerxd.github.io/portfolio/content/games/school-these-shits/content.md">
+        <a href="#" onclick="loadContent('/portfolio/content/games/school-these-shits/content.md'); return false;">
             <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/main.png" alt="School These Sh*ts">
             <figcaption>School These Sh*ts</figcaption>
         </a>
