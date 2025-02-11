@@ -93,15 +93,14 @@ async function loadContent(path) {
         
         window.scrollTo(0, 0);
         
-        // Update URL without baseUrl for cleaner paths
-        const relativePath = path.replace(baseUrl, '');
-        // Only push state if it's different from current
-        if (window.location.pathname !== relativePath) {
-            history.pushState({path: relativePath}, '', relativePath);
+        // Instead of pushing the full path to history, just keep the base URL
+        const basePathname = '/portfolio/';
+        if (window.location.pathname !== basePathname) {
+            history.pushState({path: path}, '', basePathname);
         }
         
-        // Update document title based on current page
-        updateDocumentTitle(relativePath);
+        // Update document title without changing URL
+        updateDocumentTitle(path);
     } catch (error) {
         console.error('Error loading content:', error);
         document.getElementById('content').innerHTML = `
@@ -127,7 +126,7 @@ function updateDocumentTitle(path) {
 // Handle browser back/forward
 window.onpopstate = (event) => {
     if (event.state && event.state.path) {
-        loadContent(`${baseUrl}${event.state.path}`);
+        loadContent(event.state.path);
     }
 };
 
@@ -198,7 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Set initial state
     const initialPath = `${baseUrl}/content/about/content.md`;
     loadContent(initialPath);
-    history.replaceState({path: '/content/about/content.md'}, '', '/content/about/content.md');
+    history.replaceState({path: initialPath}, '', '/portfolio/');
     
     // Set about link as initially active
     const aboutLink = document.querySelector('nav a');
