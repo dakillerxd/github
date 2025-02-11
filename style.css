@@ -192,6 +192,12 @@ main {
     justify-items: center; /* Center items within their grid cells */
 }
 
+.image-gallery a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
 .image-gallery img {
     width: 100%;
     height: auto;
@@ -200,7 +206,7 @@ main {
     border-radius: 8px;
     transition: transform 0.2s;
     background-color: rgba(0, 0, 0, 0.2);
-    max-width: 300px; /* Add a max-width to control image size */
+    max-width: 400px; /* Add a max-width to control image size */
 }
 
 .image-gallery img:hover {
@@ -212,7 +218,7 @@ main {
     opacity: 1;
 }
 
-.image-gallery figcaption {
+image-gallery figcaption {
     position: absolute;
     bottom: -30px;
     left: 50%;
@@ -226,6 +232,7 @@ main {
     transition: opacity 0.2s;
     white-space: nowrap;
     pointer-events: none;
+    z-index: 1;
 }
 
 .image-gallery figure {
