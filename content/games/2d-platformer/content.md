@@ -21,8 +21,10 @@
 ### Player Abilities
 
 - Double jump, wall sliding, wall jump, and dashing mechanics provide a versatile and engaging platforming experience.
+
 - Coyote jump and jump buffering techniques create a more forgiving and responsive control scheme.
 - Variable jump height allows players to control their jump trajectory and navigate the environment with precision.
+
 
 <div class="image-gallery">
     <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay2.gif" alt="gameplay2">
