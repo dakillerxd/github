@@ -1,6 +1,7 @@
 # School These Sh*ts
 
-![Game Screenshot](https://dakillerxd.github.io/github/assets/schooltheseshts.png)
+![Game Screenshot](https://dakillerxd.github.io/github/content/games/school-these-shits/main.png)
+[Itch Link]([#](https://danielnoam.itch.io/school-these-shts)) <!-- Add your game link here -->
 
 ## Overview
 "School These Sh*ts" is a fast-paced "shooter" where players take on the role of an unconventional teacher. Armed with textbooks as projectiles and momentum-based movement, the player must race against time to help students overcome various obstacles and achieve a 70% class success rate before the bell rings. The game combines precision throwing mechanics with strategic time management across a diverse school environment.
@@ -27,4 +28,4 @@
 - Designed intuitive movement and throwing mechanics that feel satisfying while remaining simple to learn.
 - Implemented an audio system with distinct sound cues and triggers to provide player feedback and enhance the game's atmosphere
 
-[Play the Game](#) <!-- Add your game link here -->
+
