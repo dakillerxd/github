@@ -11,13 +11,13 @@ const structure = {
             { title: "Pixel Knight", folder: "pixel-knight" }
         ]
     },
-    "PROTOTYPES/GAMEJAMS": {
-        path: "content/prototypes",
-        pages: [
-            { title: "Bubblerena - GGJ 2025", folder: "bubblerena" },
-            // { title: "PopACorn", folder: "fruit-ninja-clone" }
-        ]
-    },
+    // "PROTOTYPES/GAMEJAMS": {
+    //     path: "content/prototypes",
+    //     pages: [
+    //         { title: "Bubblerena - GGJ 2025", folder: "bubblerena" },
+    //         { title: "PopACorn", folder: "fruit-ninja-clone" }
+    //     ]
+    // },
     // "ART": {
     //     path: "content/art",
     //     pages: [
