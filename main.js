@@ -62,14 +62,18 @@ async function loadContent(path) {
 }
 
 // Show about section
-function showAbout() {
-    document.getElementById('content').innerHTML = `
-        <section id="about">
-            <h1>ABOUT</h1>
-            <p>I'm a Game Designer and Programmer who began my journey in game development.</p>
-        </section>
-    `;
+async function showAbout() {
+    try {
+        const response = await fetch('content/about/about.md');
+        if (!response.ok) throw new Error('Content not found');
+        const content = await response.text();
+        document.getElementById('content').innerHTML = marked.parse(content);
+    } catch (error) {
+        console.error('Error loading about content:', error);
+        document.getElementById('content').innerHTML = '<h1>About Content Not Found</h1>';
+    }
 }
+
 
 // Initialize when page loads
 document.addEventListener('DOMContentLoaded', buildNavigation);
