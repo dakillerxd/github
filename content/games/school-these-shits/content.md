@@ -13,6 +13,7 @@
 "School These Sh*ts" is a fast-paced "shooter" where players take on the role of an unconventional teacher. Armed with textbooks as projectiles and momentum-based movement, the player must race against time to help students overcome various obstacles and achieve a 70% class success rate before the bell rings. The game combines precision throwing mechanics with strategic time management across a diverse school environment.
 
 </div>
+
 <div class="project-card">
     
 ## Core Design Elements
@@ -52,6 +53,8 @@
 <div class="image-gallery">
      <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay1.gif" alt="Gameplay showing book throwing mechanic">
     <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay4.gif" alt="Gameplay showing book throwing mechanic">
+</div>
+
 </div>
 
 <div class="project-card">
