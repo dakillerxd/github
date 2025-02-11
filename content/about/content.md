@@ -26,6 +26,12 @@ I'm a Game Designer and Programmer who began my journey in game development duri
             <figcaption>School These Sh*ts</figcaption>
         </a>
         </figure>
+        <figure>
+        <a href="#" onclick="loadContent('/portfolio/content/games/pixel-knight/content.md'); return false;">
+            <img src="https://dakillerxd.github.io/portfolio/assets/pixel-knight/main.png" alt="Pixel Knight">
+            <figcaption>Pixel Knight</figcaption>
+        </a>
+        </figure>
 </div>
 
 
