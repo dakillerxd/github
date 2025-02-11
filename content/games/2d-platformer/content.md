@@ -2,12 +2,9 @@
 
 # 2D Platformer
 
-<figure>
-    <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/main.gif" target="_blank">
-        <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/main.gif" alt="Intro">
-        <figcaption>Intro</figcaption>
-    </a>
-</figure>
+<a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/main.gif" target="_blank">
+    <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/main.gif" alt="Intro">
+</a>
 
 
 <div class="project-card">
