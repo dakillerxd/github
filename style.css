@@ -183,7 +183,7 @@ main {
 /* Image gallery */
 .image-gallery {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns by default */
+    grid-template-columns: repeat(4, 1fr); /* 2 columns by default */
     gap: 1rem;
     margin: 1rem 0;
 }
