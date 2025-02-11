@@ -4,6 +4,7 @@ const structure = {
         path: "content/games",
         pages: [
             { title: "2D Platformer", folder: "2d-platformer" },
+            { title: "School These Shits", folder: "school-these-shits" },
             { title: "Pixel Knight", folder: "pixel-knight" }
         ]
     },
