@@ -27,13 +27,13 @@ const structure = {
 function buildNavigation() {
     const nav = document.getElementById('main-nav');
     
-    // Add About link
+    // Add About link separately without a header
     const aboutLink = document.createElement('a');
     aboutLink.textContent = "About";
-    aboutLink.onclick = () => showAbout();
+    aboutLink.onclick = () => loadContent('content/about/content.md');
     nav.appendChild(aboutLink);
-
-    // Add sections and their pages
+    
+    // Add other sections with headers
     for (const [section, content] of Object.entries(structure)) {
         const header = document.createElement('h2');
         header.textContent = section;
@@ -61,19 +61,9 @@ async function loadContent(path) {
     }
 }
 
-// Show about section
-async function showAbout() {
-    try {
-        const response = await fetch('content/about/about.md');
-        if (!response.ok) throw new Error('Content not found');
-        const content = await response.text();
-        document.getElementById('content').innerHTML = marked.parse(content);
-    } catch (error) {
-        console.error('Error loading about content:', error);
-        document.getElementById('content').innerHTML = '<h1>About Content Not Found</h1>';
-    }
-}
-
-
 // Initialize when page loads
-document.addEventListener('DOMContentLoaded', buildNavigation);
+document.addEventListener('DOMContentLoaded', () => {
+    buildNavigation();
+    // Load about page by default
+    loadContent('content/about/content.md');
+});
