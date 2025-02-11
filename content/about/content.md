@@ -1,4 +1,7 @@
 
+<div class="page-content">
+
+  
 <div class="project-card">
 
 # ABOUT
