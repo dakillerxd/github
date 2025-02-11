@@ -44,20 +44,20 @@ Developing this project provided me hands-on experience with the core aspects of
 <div class="image-gallery">
     <figure>
         <a href="https://dakillerxd.github.io/portfolio/assets/pixel-knight/gameplay1.png" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/pixel-knight/gameplay1.png" alt="Gameplay showing book throwing mechanic">
-            <figcaption>Gameplay showing book throwing mechanic</figcaption>
+            <img src="https://dakillerxd.github.io/portfolio/assets/pixel-knight/gameplay1.png" alt="Campfire before boss battle">
+            <figcaption>Campfire before boss battle</figcaption>
         </a>
     </figure>
     <figure>
         <a href="https://dakillerxd.github.io/portfolio/assets/pixel-knight/gameplay2.png" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/pixel-knight/gameplay2.png" alt="Gameplay showing book throwing mechanic">
-            <figcaption>Gameplay showing book throwing mechanic</figcaption>
+            <img src="https://dakillerxd.github.io/portfolio/assets/pixel-knight/gameplay2.png" alt="Main Menu">
+            <figcaption>Main menu</figcaption>
         </a>
     </figure>
     <figure>
         <a href="https://dakillerxd.github.io/portfolio/assets/pixel-knight/gameplay3.png" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/pixel-knight/gameplay3.png" alt="Gameplay showing book throwing mechanic">
-            <figcaption>Gameplay showing book throwing mechanic</figcaption>
+            <img src="https://dakillerxd.github.io/portfolio/assets/pixel-knight/gameplay3.png" alt="Campfire">
+            <figcaption>Campfire</figcaption>
         </a>
     </figure>
 </div>
