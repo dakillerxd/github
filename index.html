@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daniel Noam</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Make sure marked.js is loaded before main.js -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script src="main.js"></script>
+    <!-- Add defer to main.js to ensure it loads after DOM is ready -->
+    <script src="main.js" defer></script>
 </head>
 <body>
     <button class="menu-toggle" aria-label="Toggle menu">☰</button>
@@ -14,9 +16,12 @@
         <h1 class="name">DANIEL NOAM</h1>
         <nav id="main-nav"></nav>
     </div>
-    <main id="content">
-        <!-- Content will be loaded here -->
+    <main>
+        <div id="content">
+            <!-- Content will be loaded here -->
+        </div>
     </main>
-</body>
+    <!-- Move back-to-top button inside body tag -->
     <button id="back-to-top" title="Back to top">↑</button>
+</body>
 </html>
