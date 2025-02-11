@@ -130,8 +130,8 @@
     </figure>
     <figure>
         <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/hiddenarea.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/hiddenarea.gif" alt="Hidden area">
-            <figcaption>Hidden area</figcaption>
+            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/hiddenarea.gif" alt="Hidden collectible">
+            <figcaption>Hidden collectible</figcaption>
         </a>
     </figure>
     <figure>
