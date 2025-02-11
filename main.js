@@ -35,10 +35,10 @@ function buildNavigation() {
     nav.appendChild(aboutLink);
 
     // Add resume link
-    const aboutLink = document.createElement('a');
-    aboutLink.textContent = "Resume";
-    aboutLink.onclick = () => loadContent('content/about/resume.pdf');
-    nav.appendChild(aboutLink);
+    const resumeLink = document.createElement('a');
+    resumeLink.textContent = "Resume";
+    resumeLink.onclick = () => loadContent('content/about/resume.pdf');
+    nav.appendChild(resumeLink);
     
     // Add sections with headers
     for (const [section, content] of Object.entries(structure)) {
