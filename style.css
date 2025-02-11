@@ -2,7 +2,7 @@
     --bg-dark: #1a1d21;
     --text-light: #ffffff;
     --text-gray: #a0a0a0;
-    --sidebar-width: 250px;
+    --sidebar-width: 255px;
     --primary-blue: #4a9eff;
     --secondary-blue: #77b6ff;
 }
@@ -26,7 +26,7 @@ body {
 .sidebar {
     width: var(--sidebar-width);
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 3rem;
+    padding: 2rem;
     position: fixed;
     height: 100vh;
     overflow-y: auto;
