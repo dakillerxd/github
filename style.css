@@ -190,14 +190,17 @@ main {
 
 .image-gallery img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: auto; /* Changed from fixed height */
+    min-height: 200px;
+    object-fit: contain; /* Changed from cover to contain */
     border-radius: 8px;
     transition: transform 0.2s;
+    background-color: rgba(0, 0, 0, 0.2); /* Added background for contrast */
 }
 
 .image-gallery img:hover {
     transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* Error message styling */
