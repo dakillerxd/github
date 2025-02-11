@@ -3,7 +3,10 @@
 # 2D Platformer
 
 <figure>
-    <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/main.gif" alt="Intro">
+    <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/main.gif" target="_blank">
+        <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/main.gif" alt="Intro">
+        <figcaption>Intro</figcaption>
+    </a>
 </figure>
 
 
@@ -29,12 +32,16 @@
 
 <div class="image-gallery">
     <figure>
-        <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay2.gif" alt="gameplay2">
-        <figcaption>Advanced movement mechanics demonstration</figcaption>
+        <a href="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay2.gif" target="_blank">
+            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay2.gif" alt="gameplay2">
+            <figcaption>Advanced movement mechanics demonstration</figcaption>
+        </a>
     </figure>
     <figure>
-        <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay3.gif" alt="gameplay3">
-        <figcaption>Combat and platforming mechanics</figcaption>
+        <a href="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay3.gif" target="_blank">
+            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay3.gif" alt="gameplay3">
+            <figcaption>Combat and platforming mechanics</figcaption>
+        </a>
     </figure>
 </div>
 
@@ -48,12 +55,16 @@
 
 <div class="image-gallery">
     <figure>
-        <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/layout1.png" alt="layout">
-        <figcaption>Level layout showcasing environmental hazards</figcaption>
+        <a href="https://dakillerxd.github.io/portfolio/assets/school-these-shits/layout1.png" target="_blank">
+            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/layout1.png" alt="layout">
+            <figcaption>Level layout showcasing environmental hazards</figcaption>
+        </a>
     </figure>
     <figure>
-        <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/layout2.png" alt="layout">
-        <figcaption>Level design with interactive elements</figcaption>
+        <a href="https://dakillerxd.github.io/portfolio/assets/school-these-shits/layout2.png" target="_blank">
+            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/layout2.png" alt="layout">
+            <figcaption>Level design with interactive elements</figcaption>
+        </a>
     </figure>
 </div>
 
@@ -65,12 +76,16 @@
 
 <div class="image-gallery">
     <figure>
-        <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay1.gif" alt="Gameplay showing book throwing mechanic">
-        <figcaption>Book throwing mechanic in action</figcaption>
+        <a href="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay1.gif" target="_blank">
+            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay1.gif" alt="Gameplay showing book throwing mechanic">
+            <figcaption>Book throwing mechanic in action</figcaption>
+        </a>
     </figure>
     <figure>
-        <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay4.gif" alt="Gameplay showing book throwing mechanic">
-        <figcaption>Advanced combat scenarios</figcaption>
+        <a href="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay4.gif" target="_blank">
+            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay4.gif" alt="Gameplay showing book throwing mechanic">
+            <figcaption>Advanced combat scenarios</figcaption>
+        </a>
     </figure>
 </div>
 
@@ -83,12 +98,16 @@
 
 <div class="image-gallery">
     <figure>
-        <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay1.gif" alt="Gameplay showing book throwing mechanic">
-        <figcaption>Camera movement and positioning</figcaption>
+        <a href="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay1.gif" target="_blank">
+            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay1.gif" alt="Gameplay showing book throwing mechanic">
+            <figcaption>Camera movement and positioning</figcaption>
+        </a>
     </figure>
     <figure>
-        <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay4.gif" alt="Gameplay showing book throwing mechanic">
-        <figcaption>Dynamic camera transitions</figcaption>
+        <a href="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay4.gif" target="_blank">
+            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay4.gif" alt="Gameplay showing book throwing mechanic">
+            <figcaption>Dynamic camera transitions</figcaption>
+        </a>
     </figure>
 </div>
 
@@ -99,12 +118,16 @@
 
 <div class="image-gallery">
     <figure>
-        <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay1.gif" alt="Gameplay showing book throwing mechanic">
-        <figcaption>Physics-based movement mechanics</figcaption>
+        <a href="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay1.gif" target="_blank">
+            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay1.gif" alt="Gameplay showing book throwing mechanic">
+            <figcaption>Physics-based movement mechanics</figcaption>
+        </a>
     </figure>
     <figure>
-        <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay4.gif" alt="Gameplay showing book throwing mechanic">
-        <figcaption>Physics interactions with environment</figcaption>
+        <a href="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay4.gif" target="_blank">
+            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay4.gif" alt="Gameplay showing book throwing mechanic">
+            <figcaption>Physics interactions with environment</figcaption>
+        </a>
     </figure>
 </div>
 
