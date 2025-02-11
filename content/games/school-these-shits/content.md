@@ -41,10 +41,6 @@
 ## Gallery
 
 <div class="image-gallery">
-    <img src="./screenshots/gameplay1.png" alt="Gameplay showing book throwing mechanic">
-    <img src="./screenshots/gameplay2.png" alt="Classroom environment">
-    <img src="./screenshots/gameplay3.png" alt="Student interaction">
-    <img src="./screenshots/gameplay4.png" alt="School hallway">
-    <img src="./screenshots/gameplay5.png" alt="Game UI and timer">
-    <img src="./screenshots/gameplay6.png" alt="Special ability in action">
+    <img src="./gameplay1.png" alt="Gameplay showing book throwing mechanic">
+    <img src="./gameplay2.png" alt="Classroom environment">
 </div>
