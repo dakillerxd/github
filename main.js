@@ -37,7 +37,8 @@ function buildNavigation() {
     // Add resume link
     const resumeLink = document.createElement('a');
     resumeLink.textContent = "Resume";
-    resumeLink.onclick = () => loadContent('content/about/resume.pdf');
+    resumeLink.href = 'content/about/resume.pdf';
+    resumeLink.target = '_blank'; // Opens in new tab
     nav.appendChild(resumeLink);
     
     // Add sections with headers
