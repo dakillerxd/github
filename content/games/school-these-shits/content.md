@@ -63,32 +63,32 @@
 <div class="image-gallery">
     <figure>
         <a href="https://dakillerxd.github.io/portfolio/assets/school-these-shits/layout1.png" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/layout1.png" alt="layout">
-            <figcaption>layout</figcaption>
+            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/layout1.png" alt="Soccer field">
+            <figcaption>Soccer field</figcaption>
         </a>
     </figure>
     <figure>
         <a href="https://dakillerxd.github.io/portfolio/assets/school-these-shits/layout2.png" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/layout2.png" alt="layout">
-            <figcaption>layout</figcaption>
+            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/layout2.png" alt="Outdoor sitting area">
+            <figcaption>Outdoor sitting area</figcaption>
         </a>
     </figure>
     <figure>
         <a href="https://dakillerxd.github.io/portfolio/assets/school-these-shits/layout3.png" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/layout3.png" alt="layout">
+            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/layout3.png" alt="Library">
             <figcaption>layout</figcaption>
         </a>
     </figure>
     <figure>
         <a href="https://dakillerxd.github.io/portfolio/assets/school-these-shits/layout4.png" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/layout4.png" alt="layout">
-            <figcaption>layout</figcaption>
+            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/layout4.png" alt="Teacher's lounge">
+            <figcaption>Teacher's lounge</figcaption>
         </a>
     </figure>
     <figure>
         <a href="https://dakillerxd.github.io/portfolio/assets/school-these-shits/layout5.png" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/layout5.png" alt="layout">
-            <figcaption>layout</figcaption>
+            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/layout5.png" alt="Principal's office">
+            <figcaption>Principal's office</figcaption>
         </a>
     </figure>
 </div>
@@ -100,14 +100,14 @@
 <div class="image-gallery">
     <figure>
         <a href="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay1.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay1.gif" alt="Gameplay showing book throwing mechanic">
-            <figcaption>Gameplay showing book throwing mechanic</figcaption>
+            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay1.gif" alt="Difficulty levels">
+            <figcaption>Difficulty levels</figcaption>
         </a>
     </figure>
     <figure>
         <a href="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay4.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay4.gif" alt="Gameplay showing book throwing mechanic">
-            <figcaption>Gameplay showing book throwing mechanic</figcaption>
+            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay4.gif" alt="School bells rings">
+            <figcaption>School bells rings</figcaption>
         </a>
     </figure>
 </div>
