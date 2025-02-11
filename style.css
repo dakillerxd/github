@@ -5,6 +5,7 @@
     --sidebar-width: 250px;
 }
 
+/* Base styles */
 * {
     margin: 0;
     padding: 0;
@@ -19,6 +20,7 @@ body {
     min-height: 100vh;
 }
 
+/* Navigation/Sidebar Styles */
 .sidebar {
     width: var(--sidebar-width);
     background-color: rgba(0, 0, 0, 0.2);
@@ -26,12 +28,14 @@ body {
     position: fixed;
     height: 100vh;
     overflow-y: auto;
+    font-family: 'Arial', sans-serif; /* Different font for sidebar */
 }
 
 .name {
     font-size: 1.5rem;
     margin-bottom: 2rem;
     font-weight: bold;
+    color: #fff; /* Bright white for name */
 }
 
 nav {
@@ -46,6 +50,9 @@ nav a {
     padding: 0.3rem 0;
     transition: color 0.2s;
     cursor: pointer;
+    font-size: 0.9rem; /* Smaller font for nav links */
+    text-transform: uppercase; /* Make nav links uppercase */
+    letter-spacing: 1px; /* Spread letters slightly */
 }
 
 nav a:hover {
@@ -56,9 +63,13 @@ nav h2 {
     font-size: 0.9rem;
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;
-    color: var(--text-light);
+    color: #4a9eff; /* Blue color for section headers */
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
+/* Main Content Styles */
 main {
     margin-left: var(--sidebar-width);
     padding: 2rem;
@@ -67,6 +78,7 @@ main {
     margin-right: auto;
     margin-left: auto;
     padding-left: 250px;
+    font-family: 'Georgia', serif; /* Different font for main content */
 }
 
 #content {
@@ -76,83 +88,68 @@ main {
     padding: 2rem;
 }
 
-section {
-    margin-bottom: 4rem;
-}
-
-h1 {
-    font-size: 2.5rem;
+/* Page Content Styles */
+.page-content h1 {
+    font-size: 3rem;
     margin-bottom: 2rem;
     text-align: center;
+    color: #4a9eff; /* Blue color for main headers */
+    font-weight: 300; /* Lighter weight for elegance */
 }
 
-h2 {
-    font-size: 1.8rem;
+.page-content h2 {
+    font-size: 2rem;
     margin: 2rem 0 1rem 0;
     text-align: center;
+    color: #77b6ff; /* Lighter blue for subheaders */
 }
 
-h3 {
-    font-size: 1.3rem;
-    margin: 1.5rem 0 1rem 0;
+.page-content p {
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
     text-align: center;
+    font-size: 1.1rem;
+    color: #e0e0e0; /* Slightly off-white for better readability */
 }
 
-p {
-    line-height: 1.6;
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-img {
+.page-content img {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 2rem auto;
-    border-radius: 4px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 2.5rem auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
-ul, ol {
+.page-content ul, 
+.page-content ol {
     max-width: 600px;
-    margin: 1rem auto;
+    margin: 1.5rem auto;
     padding-left: 2rem;
     text-align: left;
 }
 
-li {
-    margin-bottom: 0.5rem;
+.page-content li {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
 }
 
-a {
+/* Project specific styles */
+.project-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h2 {
     color: #4a9eff;
-    text-decoration: none;
-    transition: color 0.2s;
+    border-bottom: 2px solid #4a9eff;
+    padding-bottom: 0.5rem;
 }
 
-a:hover {
-    color: #77b6ff;
-}
-
-/* For code blocks if you have any */
-code {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 0.2em 0.4em;
-    border-radius: 3px;
-    font-family: monospace;
-}
-
-/* For blockquotes if you need them */
-blockquote {
-    border-left: 4px solid var(--text-gray);
-    margin: 1.5rem auto;
-    padding-left: 1rem;
-    max-width: 600px;
-    color: var(--text-gray);
-    font-style: italic;
-}
-
-/* Responsive design for smaller screens */
+/* Responsive Design */
 @media (max-width: 768px) {
     .sidebar {
         width: 200px;
@@ -162,11 +159,11 @@ blockquote {
         padding-left: 200px;
     }
     
-    h1 {
-        font-size: 2rem;
+    .page-content h1 {
+        font-size: 2.5rem;
     }
     
-    h2 {
-        font-size: 1.5rem;
+    .page-content h2 {
+        font-size: 1.8rem;
     }
 }
