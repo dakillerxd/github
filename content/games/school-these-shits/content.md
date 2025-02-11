@@ -23,17 +23,31 @@
 - Precision-focused book throwing mechanic requiring careful aim and timing
 - Various student obstacles requiring creative problem-solving, from retrieving lost items to freeing students from lockers
 
+<div class="image-gallery">
+    <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay1.png" alt="Gameplay showing book throwing mechanic">
+    <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay2.png" alt="Classroom environment">
+</div>
+
 ### Environment Design
 
 - Diverse school environment featuring classrooms, offices, playground, and unique areas to explore
 - Environmental storytelling through scattered notes, bulletin boards, and student items to expand about the game world
+
+<div class="image-gallery">
+    <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay1.png" alt="Gameplay showing book throwing mechanic">
+    <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay2.png" alt="Classroom environment">
+</div>
 
 ### Difficulty and Time Management
 
 - Time-pressured gameplay encouraging mastery of movement, accuracy, and route optimization
 - Multiple difficulty levels allowing players to learn mechanics while providing increasing challenge
 
+<div class="image-gallery">
+    <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay1.png" alt="Gameplay showing book throwing mechanic">
+    <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay2.png" alt="Classroom environment">
 </div>
+
 <div class="project-card">
     
 ## Development Insights
