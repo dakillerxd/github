@@ -14,6 +14,7 @@
 
 
 </div>
+
 <div class="project-card">
     
 ## Core Design Elements
@@ -74,6 +75,8 @@
 <div class="image-gallery">
      <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay1.gif" alt="Gameplay showing book throwing mechanic">
     <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay4.gif" alt="Gameplay showing book throwing mechanic">
+</div>
+
 </div>
 
 <div class="project-card">
