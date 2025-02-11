@@ -1,3 +1,15 @@
+// Get the base URL for GitHub Pages
+const getBaseUrl = () => {
+    // If using username.github.io
+    if (window.location.hostname === 'dakillerxd.github.io') {
+        return '';
+    }
+    // If using project repository (e.g., username.github.io/portfolio)
+    return '/' + window.location.pathname.split('/')[1];
+};
+
+const baseUrl = getBaseUrl();
+
 // Project structure
 const structure = {
     "GAMES": {
@@ -31,13 +43,13 @@ function buildNavigation() {
     // Add About link first, without a header
     const aboutLink = document.createElement('a');
     aboutLink.textContent = "About";
-    aboutLink.onclick = () => loadContent('content/about/content.md');
+    aboutLink.onclick = () => loadContent(`${baseUrl}/content/about/content.md`);
     nav.appendChild(aboutLink);
 
     // Add resume link
     const resumeLink = document.createElement('a');
     resumeLink.textContent = "Resume";
-    resumeLink.href = 'content/about/resume.pdf';
+    resumeLink.href = `${baseUrl}/content/about/resume.pdf`;
     resumeLink.target = '_blank'; // Opens in new tab
     nav.appendChild(resumeLink);
     
@@ -50,7 +62,7 @@ function buildNavigation() {
         content.pages.forEach(page => {
             const link = document.createElement('a');
             link.textContent = page.title;
-            link.onclick = () => loadContent(`${content.path}/${page.folder}/content.md`);
+            link.onclick = () => loadContent(`${baseUrl}/${content.path}/${page.folder}/content.md`);
             nav.appendChild(link);
         });
     }
@@ -73,5 +85,5 @@ async function loadContent(path) {
 document.addEventListener('DOMContentLoaded', () => {
     buildNavigation();
     // Load about page by default
-    loadContent('content/about/content.md');
+    loadContent(`${baseUrl}/content/about/content.md`);
 });
