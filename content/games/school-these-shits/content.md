@@ -2,7 +2,7 @@
 
 # School These Sh*ts
 
-![Game Screenshot](./main.png)
+![Game Screenshot](https://dakillerxd.github.io/portfolio/content/games/school-these-shits/main.png)
 
 [Play on Itch.io](https://danielnoam.itch.io/school-these-shts)
 
