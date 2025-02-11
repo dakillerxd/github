@@ -34,6 +34,7 @@
 - Diverse monster roster with unique behaviors and abilities, such as inflicting status effects (poison, fire damage), creates varied challenges.
 - Boss battles featuring distinct combat patterns test players' skills and adaptability.
 
+</div>
 
 <div class="project-card">
     
