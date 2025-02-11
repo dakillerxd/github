@@ -1,14 +1,5 @@
 // Get the base URL for GitHub Pages
-const getBaseUrl = () => {
-    // If using username.github.io
-    if (window.location.hostname === 'dakillerxd.github.io') {
-        return '';
-    }
-    // If using project repository (e.g., username.github.io/portfolio)
-    return '/' + window.location.pathname.split('/')[1];
-};
-
-const baseUrl = getBaseUrl();
+const baseUrl = '/portfolio'; // This is your repository name
 
 // Project structure
 const structure = {
