@@ -1,3 +1,5 @@
+<div class="page-content">
+
 # School These Sh*ts
 
 ![Game Screenshot](/portfolio/content/games/school-these-shits/main.png)
