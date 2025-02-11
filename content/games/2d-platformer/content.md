@@ -84,15 +84,45 @@
 
 <div class="image-gallery">
     <figure>
-        <a href="https://dakillerxd.github.io/portfolio/assets/school-these-shits/layout1.png" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/layout1.png" alt="layout">
-            <figcaption>Level layout showcasing environmental hazards</figcaption>
+        <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/Hazard2.gif" target="_blank">
+            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/Hazard2.gif" alt="Double jump">
+            <figcaption>Double jump</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://dakillerxd.github.io/portfolio/assets/school-these-shits/layout2.png" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/layout2.png" alt="layout">
-            <figcaption>Level design with interactive elements</figcaption>
+        <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/Hazard3.gif" target="_blank">
+            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/Hazard3.gif" alt="Wall slide">
+            <figcaption>Wall slide</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/hiddenarea.gif" target="_blank">
+            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/hiddenarea.gif" alt="Hidden area">
+            <figcaption>Hidden area</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/hazard1.gif" target="_blank">
+            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/hazard1.gif" alt="Variable jump height">
+            <figcaption>Variable jump height</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/hazard4.gif" target="_blank">
+            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/hazard4.gif" alt="Coyote jump">
+            <figcaption>Coyote jump</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/movingplatform.gif" target="_blank">
+            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/movingplatform.gif" alt="Moving platform">
+            <figcaption>Moving platform</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/softPlatform.gif" target="_blank">
+            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/softPlatform.gif" alt="Soft platform">
+            <figcaption>Soft platform</figcaption>
         </a>
     </figure>
 </div>
@@ -105,15 +135,27 @@
 
 <div class="image-gallery">
     <figure>
-        <a href="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay1.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay1.gif" alt="Gameplay showing book throwing mechanic">
-            <figcaption>Book throwing mechanic in action</figcaption>
+        <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/camera1.gif" target="_blank">
+            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/camera1.gif" alt="Soft platform">
+            <figcaption>Soft platform</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay4.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay4.gif" alt="Gameplay showing book throwing mechanic">
-            <figcaption>Advanced combat scenarios</figcaption>
+        <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/camera2.gif" target="_blank">
+            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/camera2.gif" alt="Soft platform">
+            <figcaption>Soft platform</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/camera3.gif" target="_blank">
+            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/camera3.gif" alt="Soft platform">
+            <figcaption>Soft platform</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/camera4.gif" target="_blank">
+            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/camera4.gif" alt="Soft platform">
+            <figcaption>Soft platform</figcaption>
         </a>
     </figure>
 </div>
