@@ -22,30 +22,17 @@
 - Melee attacks, special abilities (dashing, AOE attack), and a ranged fireball spell create a varied combat experience.
 - Stamina system requires resource management and strategic decision-making during battles.
 
-<div class="image-gallery">
-    <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay2.gif" alt="gameplay2">
-    <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay3.gif" alt="gameplay3">
-</div>
 
 ### Resource Managment
 
 - Health, stamina, and mana management system challenges players to balance their resources effectively.
 - Healing options, such as consumable potions and rest points, provide players with strategic choices during combat.
 
-<div class="image-gallery">
-    <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/layout1.png" alt="layout">
-    <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/layout2.png" alt="layout">
-</div>
 
 ### Enemy Design
 
 - Diverse monster roster with unique behaviors and abilities, such as inflicting status effects (poison, fire damage), creates varied challenges.
 - Boss battles featuring distinct combat patterns test players' skills and adaptability.
-
-<div class="image-gallery">
-     <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay1.gif" alt="Gameplay showing book throwing mechanic">
-    <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay4.gif" alt="Gameplay showing book throwing mechanic">
-</div>
 
 
 <div class="project-card">
@@ -61,3 +48,10 @@ Developing this project provided me hands-on experience with the core aspects of
 
 </div>
 
+<div class="project-card">
+## Gallery
+<div class="image-gallery">
+     <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay1.gif" alt="Gameplay showing book throwing mechanic">
+    <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay4.gif" alt="Gameplay showing book throwing mechanic">
+</div>
+</div>
