@@ -60,9 +60,3 @@
 
 </div>
 
-## Gallery
-
-<div class="image-gallery">
-    <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay1.png" alt="Gameplay showing book throwing mechanic">
-    <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay2.png" alt="Classroom environment">
-</div>
