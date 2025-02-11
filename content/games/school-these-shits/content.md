@@ -24,7 +24,6 @@
 - Various student obstacles requiring creative problem-solving, from retrieving lost items to freeing students from lockers
 
 <div class="image-gallery">
-    <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay1.gif" alt="gameplay1">
     <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay2.gif" alt="gameplay2">
     <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay3.gif" alt="gameplay3">
     <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/trickshot.gif" alt="gameplay5">
@@ -51,6 +50,7 @@
 - Multiple difficulty levels allowing players to learn mechanics while providing increasing challenge
 
 <div class="image-gallery">
+     <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay1.gif" alt="Gameplay showing book throwing mechanic">
     <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay4.gif" alt="Gameplay showing book throwing mechanic">
 </div>
 
