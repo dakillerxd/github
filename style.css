@@ -186,9 +186,8 @@ main {
     grid-template-columns: repeat(3, 1fr);
     row-gap: 1rem;    /* Vertical gap between rows */
     column-gap: 1rem; /* Horizontal gap between columns */
-    margin: 1rem 0;
-    justify-items: center; /* Centers items within their grid cells */
-    justify-content: center; /* Centers the entire grid */
+    margin: 1rem auto;  /* Changed from '1rem 0' to '1rem auto' */
+    max-width: fit-content; /* This ensures the grid is only as wide as its content */
 }
 
 .image-gallery img {
