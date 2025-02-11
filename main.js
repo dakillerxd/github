@@ -15,7 +15,7 @@ const structure = {
         path: "content/prototypes",
         pages: [
             { title: "Bubblerena - GGJ 2025", folder: "bubblerena" },
-            { title: "Fruit Ninja Clone", folder: "fruit-ninja-clone" }
+            { title: "PopACorn", folder: "fruit-ninja-clone" }
         ]
     },
     "ART": {
