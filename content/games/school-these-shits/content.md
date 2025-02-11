@@ -26,6 +26,11 @@
 <div class="image-gallery">
     <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay1.png" alt="Gameplay showing book throwing mechanic">
     <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay2.png" alt="Classroom environment">
+    <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay3.png" alt="Classroom environment">
+    <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay4.png" alt="Classroom environment">
+    <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/trickshot.png" alt="Classroom environment">
+    <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/mission1.png" alt="Classroom environment">
+    <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/mission2.png" alt="Classroom environment">
 </div>
 
 ### Environment Design
@@ -34,8 +39,11 @@
 - Environmental storytelling through scattered notes, bulletin boards, and student items to expand about the game world
 
 <div class="image-gallery">
-    <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay1.png" alt="Gameplay showing book throwing mechanic">
-    <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay2.png" alt="Classroom environment">
+    <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/layout1.png" alt="Gameplay showing book throwing mechanic">
+    <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/layout2.png" alt="Gameplay showing book throwing mechanic">
+    <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/layout3.png" alt="Gameplay showing book throwing mechanic">
+    <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/layout4.png" alt="Gameplay showing book throwing mechanic">
+    <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/layout5.png" alt="Gameplay showing book throwing mechanic">
 </div>
 
 ### Difficulty and Time Management
