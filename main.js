@@ -15,16 +15,17 @@ const structure = {
         path: "content/prototypes",
         pages: [
             { title: "Bubblerena - GGJ 2025", folder: "bubblerena" },
-            { title: "PopACorn", folder: "fruit-ninja-clone" }
+            // { title: "PopACorn", folder: "fruit-ninja-clone" }
         ]
     },
-    "ART": {
-        path: "content/art",
-        pages: [
-            { title: "Shaders", folder: "shaders" },
-            { title: "Blender", folder: "blender" }
-        ]
-    }
+    // "ART": {
+    //     path: "content/art",
+    //     pages: [
+    //         { title: "Shaders", folder: "shaders" },
+    //         { title: "Procedural Animations", folder: "shaders" },
+    //         { title: "Blender", folder: "blender" }
+    //     ]
+    // }
 };
 
 // Track active link
