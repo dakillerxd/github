@@ -24,13 +24,13 @@
 - Various student obstacles requiring creative problem-solving, from retrieving lost items to freeing students from lockers
 
 <div class="image-gallery">
-    <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay1.png" alt="Gameplay showing book throwing mechanic">
-    <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay2.png" alt="Classroom environment">
-    <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay3.png" alt="Classroom environment">
-    <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay4.png" alt="Classroom environment">
-    <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/trickshot.png" alt="Classroom environment">
-    <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/mission1.png" alt="Classroom environment">
-    <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/mission2.png" alt="Classroom environment">
+    <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay1.gif" alt="Gameplay showing book throwing mechanic">
+    <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay2.gif" alt="Classroom environment">
+    <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay3.gif" alt="Classroom environment">
+    <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay4.gif" alt="Classroom environment">
+    <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/trickshot.gif" alt="Classroom environment">
+    <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/mission1.gif" alt="Classroom environment">
+    <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/mission2.gif" alt="Classroom environment">
 </div>
 
 ### Environment Design
@@ -52,8 +52,8 @@
 - Multiple difficulty levels allowing players to learn mechanics while providing increasing challenge
 
 <div class="image-gallery">
-    <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay1.png" alt="Gameplay showing book throwing mechanic">
-    <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay2.png" alt="Classroom environment">
+    <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay1.gif" alt="Gameplay showing book throwing mechanic">
+    <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay2.gif" alt="Classroom environment">
 </div>
 
 <div class="project-card">
