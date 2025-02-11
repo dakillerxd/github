@@ -25,19 +25,51 @@
 - Double jump, wall sliding, wall jump, and dashing mechanics provide a versatile and engaging platforming experience.
 - Coyote jump and jump buffering techniques create a more forgiving and responsive control scheme.
 - Variable jump height allows players to control their jump trajectory and navigate the environment with precision.
+- Unique gravity and friction that provide a satisfying and responsive platforming experience.
+- Fine-tuned physics parameters that allow for precise player control and predictable movement.
 
 
 <div class="image-gallery">
     <figure>
-        <a href="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay2.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay2.gif" alt="gameplay2">
-            <figcaption>Advanced movement mechanics demonstration</figcaption>
+        <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/doublejump.gif" target="_blank">
+            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/doublejump.gif" alt="Double jump">
+            <figcaption>Double jump</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay3.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay3.gif" alt="gameplay3">
-            <figcaption>Combat and platforming mechanics</figcaption>
+        <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/wallslide.gif" target="_blank">
+            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/wallslide.gif" alt="Wall slide">
+            <figcaption>Wall slide</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/walljump.gif" target="_blank">
+            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/walljump.gif" alt="Wall jump">
+            <figcaption>Wall jump</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/variableJump.gif" target="_blank">
+            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/variableJump.gif" alt="Variable jump height">
+            <figcaption>Variable jump height</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/player1.gif" target="_blank">
+            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/player1.gif" alt="Coyote jump">
+            <figcaption>Coyote jump</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/Physics1.gif" target="_blank">
+            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/Physics1.gif" alt="Coyote jump">
+            <figcaption>Coyote jump</figcaption>
+        </a>
+    </figure>
+    <figure>
+        <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/Physics2.gif" target="_blank">
+            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/Physics2.gif" alt="Coyote jump">
+            <figcaption>Coyote jump</figcaption>
         </a>
     </figure>
 </div>
@@ -108,25 +140,6 @@
     </figure>
 </div>
 
-### Physics
-
-- Unique gravity and friction that provide a satisfying and responsive platforming experience.
-- Fine-tuned physics parameters that allow for precise player control and predictable movement.
-
-<div class="image-gallery">
-    <figure>
-        <a href="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay1.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay1.gif" alt="Gameplay showing book throwing mechanic">
-            <figcaption>Physics-based movement mechanics</figcaption>
-        </a>
-    </figure>
-    <figure>
-        <a href="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay4.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay4.gif" alt="Gameplay showing book throwing mechanic">
-            <figcaption>Physics interactions with environment</figcaption>
-        </a>
-    </figure>
-</div>
 
 </div>
 
