@@ -1,5 +1,5 @@
 // Get the base URL for GitHub Pages
-const baseUrl = '/portfolio'; // This is your repository name
+const baseUrl = '/portfolio';
 
 // Project structure
 const structure = {
@@ -27,24 +27,40 @@ const structure = {
     }
 };
 
-// Build navigation menu
+// Track active link
+let activeLink = null;
+
+function setActiveLink(link) {
+    if (activeLink) {
+        activeLink.classList.remove('active');
+    }
+    link.classList.add('active');
+    activeLink = link;
+}
+
 function buildNavigation() {
     const nav = document.getElementById('main-nav');
     
-    // Add About link first, without a header
+    // About link
     const aboutLink = document.createElement('a');
     aboutLink.textContent = "About";
-    aboutLink.onclick = () => loadContent(`${baseUrl}/content/about/content.md`);
+    aboutLink.onclick = () => {
+        loadContent(`${baseUrl}/content/about/content.md`);
+        setActiveLink(aboutLink);
+    };
     nav.appendChild(aboutLink);
-
-    // Add resume link
+    
+    // Resume link
     const resumeLink = document.createElement('a');
     resumeLink.textContent = "Resume";
     resumeLink.href = `${baseUrl}/content/about/resume.pdf`;
-    resumeLink.target = '_blank'; // Opens in new tab
+    resumeLink.target = '_blank';
+    resumeLink.onclick = () => {
+        console.log('Resume viewed');
+    };
     nav.appendChild(resumeLink);
     
-    // Add sections with headers
+    // Sections with headers
     for (const [section, content] of Object.entries(structure)) {
         const header = document.createElement('h2');
         header.textContent = section;
@@ -53,28 +69,81 @@ function buildNavigation() {
         content.pages.forEach(page => {
             const link = document.createElement('a');
             link.textContent = page.title;
-            link.onclick = () => loadContent(`${baseUrl}/${content.path}/${page.folder}/content.md`);
+            link.onclick = () => {
+                loadContent(`${baseUrl}/${content.path}/${page.folder}/content.md`);
+                setActiveLink(link);
+            };
             nav.appendChild(link);
         });
     }
 }
 
-// Load content from markdown files
 async function loadContent(path) {
     try {
         const response = await fetch(path);
         if (!response.ok) throw new Error('Content not found');
         const content = await response.text();
-        document.getElementById('content').innerHTML = marked.parse(content);
+        
+        const contentElement = document.getElementById('content');
+        contentElement.classList.add('loading');
+        
+        contentElement.innerHTML = marked.parse(content);
+        
+        contentElement.classList.remove('loading');
+        
+        window.scrollTo(0, 0);
+        
+        const relativePath = path.replace(baseUrl, '');
+        history.pushState({path: relativePath}, '', relativePath);
     } catch (error) {
         console.error('Error loading content:', error);
-        document.getElementById('content').innerHTML = '<h1>Content Not Found</h1>';
+        document.getElementById('content').innerHTML = `
+            <div class="error-message">
+                <h1>Content Not Found</h1>
+                <p>Sorry, the requested content could not be loaded.</p>
+            </div>
+        `;
     }
 }
 
-// Initialize when page loads
+// Handle browser back/forward
+window.onpopstate = (event) => {
+    if (event.state && event.state.path) {
+        loadContent(`${baseUrl}${event.state.path}`);
+    }
+};
+
+// Mobile menu toggle
+function initMobileMenu() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const sidebar = document.querySelector('.sidebar');
+    
+    if (menuToggle && sidebar) {
+        menuToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!sidebar.contains(event.target) && 
+                !menuToggle.contains(event.target) && 
+                sidebar.classList.contains('active')) {
+                sidebar.classList.remove('active');
+            }
+        });
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     buildNavigation();
-    // Load about page by default
-    loadContent(`${baseUrl}/content/about/content.md`);
+    initMobileMenu();
+    
+    // Set initial state
+    const initialPath = `${baseUrl}/content/about/content.md`;
+    loadContent(initialPath);
+    history.replaceState({path: '/content/about/content.md'}, '', '/content/about/content.md');
+    
+    // Set about link as initially active
+    const aboutLink = document.querySelector('nav a');
+    if (aboutLink) setActiveLink(aboutLink);
 });
