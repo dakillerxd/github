@@ -158,26 +158,26 @@
 <div class="image-gallery">
     <figure>
         <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/camera1.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/camera1.gif" alt="Soft platform">
-            <figcaption>Soft platform</figcaption>
+            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/camera1.gif" alt="Different camera states">
+            <figcaption>Different camera states</figcaption>
         </a>
     </figure>
     <figure>
         <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/camera2.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/camera2.gif" alt="Soft platform">
-            <figcaption>Soft platform</figcaption>
+            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/camera2.gif" alt="Smooth zooming">
+            <figcaption>Smooth zooming</figcaption>
         </a>
     </figure>
     <figure>
         <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/camera3.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/camera3.gif" alt="Soft platform">
-            <figcaption>Soft platform</figcaption>
+            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/camera3.gif" alt="Smooth camera transitions">
+            <figcaption>Smooth camera transitions</figcaption>
         </a>
     </figure>
     <figure>
         <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/camera4.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/camera4.gif" alt="Soft platform">
-            <figcaption>Soft platform</figcaption>
+            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/camera4.gif" alt="Different camera states">
+            <figcaption>Different camera states</figcaption>
         </a>
     </figure>
 </div>
