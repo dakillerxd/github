@@ -8,7 +8,7 @@ I'm a Game Designer and Programmer who began my journey in game development duri
 
 
 
-# Games
+
 These are some of my game projects that demonstrate my skills and creativity in game development.
 
 <div class="image-gallery">
