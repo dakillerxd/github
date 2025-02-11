@@ -26,7 +26,7 @@ body {
 .sidebar {
     width: var(--sidebar-width);
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 2rem;
+    padding: 3rem;
     position: fixed;
     height: 100vh;
     overflow-y: auto;
