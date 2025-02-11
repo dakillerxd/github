@@ -93,8 +93,15 @@ async function loadContent(path) {
         
         window.scrollTo(0, 0);
         
+        // Update URL without baseUrl for cleaner paths
         const relativePath = path.replace(baseUrl, '');
-        history.pushState({path: relativePath}, '', relativePath);
+        // Only push state if it's different from current
+        if (window.location.pathname !== relativePath) {
+            history.pushState({path: relativePath}, '', relativePath);
+        }
+        
+        // Update document title based on current page
+        updateDocumentTitle(relativePath);
     } catch (error) {
         console.error('Error loading content:', error);
         document.getElementById('content').innerHTML = `
@@ -104,6 +111,17 @@ async function loadContent(path) {
             </div>
         `;
     }
+}
+
+// Helper function to update document title
+function updateDocumentTitle(path) {
+    let title = 'Daniel Noam';
+    // Extract page name from path and add to title
+    const pageName = path.split('/').pop().replace('content.md', '').replace(/-/g, ' ');
+    if (pageName) {
+        title = `${pageName.charAt(0).toUpperCase() + pageName.slice(1)} | ${title}`;
+    }
+    document.title = title;
 }
 
 // Handle browser back/forward
@@ -134,6 +152,45 @@ function initMobileMenu() {
     }
 }
 
+// Back to top button functionality
+window.onscroll = function() {
+    const button = document.getElementById("back-to-top");
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        button.style.display = "block";
+    } else {
+        button.style.display = "none";
+    }
+};
+
+// Back to top button click handler
+document.getElementById("back-to-top").onclick = function() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+};
+
+// Handle page load and refresh
+window.onload = function() {
+    const currentPath = window.location.pathname;
+    if (currentPath === '/portfolio/' || currentPath === '/portfolio/index.html') {
+        // Load default content
+        loadContent(`${baseUrl}/content/about/content.md`);
+    } else {
+        // Load content based on current path
+        loadContent(`${baseUrl}${currentPath}`);
+    }
+    
+    // Update active link based on current path
+    const links = document.querySelectorAll('nav a');
+    links.forEach(link => {
+        if (link.getAttribute('href') === currentPath) {
+            setActiveLink(link);
+        }
+    });
+};
+
+// Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     buildNavigation();
     initMobileMenu();
