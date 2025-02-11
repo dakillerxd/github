@@ -218,7 +218,7 @@ main {
     opacity: 1;
 }
 
-image-gallery figcaption {
+.image-gallery figcaption {
     position: absolute;
     bottom: 5px;
     left: 50%;
