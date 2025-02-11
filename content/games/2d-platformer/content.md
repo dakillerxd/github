@@ -20,10 +20,9 @@
 
 ### Player Abilities
 
-- Double jump, wall sliding, wall jump, and dashing mechanics provide a versatile and engaging platforming experience.
-
-- Coyote jump and jump buffering techniques create a more forgiving and responsive control scheme.
-- Variable jump height allows players to control their jump trajectory and navigate the environment with precision.
+- Double jump, wall sliding, wall jump, and dashing mechanics provide a versatile and engaging platforming experience.
+- Coyote jump and jump buffering techniques create a more forgiving and responsive control scheme.
+- Variable jump height allows players to control their jump trajectory and navigate the environment with precision.
 
 
 <div class="image-gallery">
@@ -33,11 +32,11 @@
 
 ### Environmental Elements
 
-- Hazardous obstacles like lava and spikes that make traversal dangerous.- Soft objects that players can jump through from below but land on from above.
-- Crumbling objects that add a sense of urgency and require quick decision-making.
-- Moving platforms that require timing and coordination to navigate.
-- Portals that transport players to different parts of the level or to entirely new areas.
-- Checkpoints that allow players to save their progress and provide a sense of accomplishment.
+- Hazardous obstacles like lava and spikes that make traversal dangerous.- Soft objects that players can jump through from below but land on from above.
+- Crumbling objects that add a sense of urgency and require quick decision-making.
+- Moving platforms that require timing and coordination to navigate.
+- Portals that transport players to different parts of the level or to entirely new areas.
+- Checkpoints that allow players to save their progress and provide a sense of accomplishment.
 
 <div class="image-gallery">
     <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/layout1.png" alt="layout">
@@ -46,9 +45,9 @@
 
 ### Level Design and Progression
 
-- Carefully crafted levels that gradually introduce new mechanics and challenges.
-- Fake walls and hidden areas that reward exploration and encourage players to search for secrets.
-- Balanced difficulty curve that keeps players engaged and motivated to improve their skills.
+- Carefully crafted levels that gradually introduce new mechanics and challenges.
+- Fake walls and hidden areas that reward exploration and encourage players to search for secrets.
+- Balanced difficulty curve that keeps players engaged and motivated to improve their skills.
 
 <div class="image-gallery">
      <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay1.gif" alt="Gameplay showing book throwing mechanic">
@@ -58,9 +57,9 @@
 
 ### Camera
 
-- Camera smoothly follows the player's movement and adjusts based on their position and velocity.
-- Intelligent camera positioning ensures optimal visibility of the player's surroundings.
-- Smooth camera transitions between different areas of the level create a seamless gameplay experience.
+- Camera smoothly follows the player's movement and adjusts based on their position and velocity.
+- Intelligent camera positioning ensures optimal visibility of the player's surroundings.
+- Smooth camera transitions between different areas of the level create a seamless gameplay experience.
 
 <div class="image-gallery">
      <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay1.gif" alt="Gameplay showing book throwing mechanic">
@@ -69,8 +68,8 @@
 
 ### Physics
 
-- Unique gravity and friction that provide a satisfying and responsive platforming experience.
-- Fine-tuned physics parameters that allow for precise player control and predictable movement.
+- Unique gravity and friction that provide a satisfying and responsive platforming experience.
+- Fine-tuned physics parameters that allow for precise player control and predictable movement.
 
 <div class="image-gallery">
      <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay1.gif" alt="Gameplay showing book throwing mechanic">
