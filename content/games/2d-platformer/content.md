@@ -5,6 +5,7 @@
 
 <img src="https://danielnoam.github.io/portfolio/assets/2d-platformer/main.gif" alt="Intro">
 
+[Play on Itch.io](https://danielnoam.itch.io/2d-platformer)
 
 
 <div class="project-card">
