@@ -395,13 +395,13 @@ main {
             RESPONSIVE DESIGN
 ================================================*/
 @media (max-width: 768px) {
-    .theme-toggle {
-        position: fixed;
-        bottom: 1rem;
-        left: 1rem;
-        right: 1rem;
+    .sidebar {
+        transform: translateX(-100%);
+        z-index: 1000;
+        width: 100%;
+        background-color: var(--sidebar-bg);
+        padding-top: 4rem;
     }
-}
 
     .sidebar.active {
         transform: translateX(0);
@@ -442,3 +442,4 @@ main {
         height: 40px;
         font-size: 20px;
     }
+}
