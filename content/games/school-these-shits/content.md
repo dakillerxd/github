@@ -77,7 +77,7 @@
     <figure>
         <a href="https://dakillerxd.github.io/portfolio/assets/school-these-shits/layout3.png" target="_blank">
             <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/layout3.png" alt="Library">
-            <figcaption>layout</figcaption>
+            <figcaption>Library</figcaption>
         </a>
     </figure>
     <figure>
