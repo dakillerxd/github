@@ -293,8 +293,8 @@ main {
     bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.8);
-    color: var(--text-light);
+    background-color: var(--card-bg);
+    color: var(--text-color);
     padding: 5px 10px;
     border-radius: 4px;
     font-size: 0.9rem;
@@ -304,20 +304,20 @@ main {
     pointer-events: none;
     text-align: center;
     z-index: 1;
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--text-secondary);
 }
 
 /*==============================================
             THEME TOGGLE STYLES
 ================================================*/
 .theme-toggle {
-    position: fixed; /* Changed from absolute to fixed */
+    position: absolute;
     bottom: 2rem;
     left: 2rem;
     right: 2rem;
-    max-width: 200px; /* Add max-width for larger screens */
-    margin: 0 auto; /* Center the button */
     padding: 0.75rem;
-    background: var(--card-bg); /* Add background for better visibility */
+    background: none;
     border: 1px solid var(--link-color);
     border-radius: 8px;
     color: var(--text-color);
@@ -328,7 +328,6 @@ main {
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    z-index: 999; /* Ensure button stays above other content */
 }
 
 .theme-toggle:hover {
@@ -373,8 +372,8 @@ main {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    background-color: var(--primary-blue);
-    color: var(--text-light);
+    background-color: var(--heading-color);
+    color: var(--bg-color);
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -388,7 +387,7 @@ main {
 }
 
 #back-to-top:hover {
-    background-color: var(--secondary-blue);
+    background-color: var(--subheading-color);
     transform: translateY(-3px);
 }
 
@@ -397,16 +396,12 @@ main {
 ================================================*/
 @media (max-width: 768px) {
     .theme-toggle {
+        position: fixed;
         bottom: 1rem;
-        left: 50%;
-        right: auto;
-        transform: translateX(-50%);
-        width: calc(100% - 2rem);
-        max-width: 300px;
-        background: var(--card-bg);
-        backdrop-filter: blur(10px);
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        left: 1rem;
+        right: 1rem;
     }
+}
 
     .sidebar.active {
         transform: translateX(0);
@@ -447,4 +442,3 @@ main {
         height: 40px;
         font-size: 20px;
     }
-}
