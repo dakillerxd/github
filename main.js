@@ -1,7 +1,10 @@
-// Get the base URL for GitHub Pages
+/*==============================================
+                CONFIGURATION
+================================================*/
+// Base URL for GitHub Pages
 const baseUrl = '/portfolio';
 
-// Project structure
+// Project structure configuration
 const structure = {
     "GAMES": {
         path: "content/games",
@@ -11,6 +14,7 @@ const structure = {
             { title: "Pixel Knight", folder: "pixel-knight" }
         ]
     },
+    // Commented sections for future use
     // "PROTOTYPES/GAMEJAMS": {
     //     path: "content/prototypes",
     //     pages: [
@@ -28,9 +32,13 @@ const structure = {
     // }
 };
 
+/*==============================================
+            NAVIGATION MANAGEMENT
+================================================*/
 // Track active link
 let activeLink = null;
 
+// Set active link in navigation
 function setActiveLink(link) {
     if (activeLink) {
         activeLink.classList.remove('active');
@@ -39,10 +47,11 @@ function setActiveLink(link) {
     activeLink = link;
 }
 
+// Build navigation structure
 function buildNavigation() {
     const nav = document.getElementById('main-nav');
-    
-    // About link
+
+    // Create About link
     const aboutLink = document.createElement('a');
     aboutLink.textContent = "About";
     aboutLink.onclick = () => {
@@ -50,8 +59,8 @@ function buildNavigation() {
         setActiveLink(aboutLink);
     };
     nav.appendChild(aboutLink);
-    
-    // Resume link
+
+    // Create Resume link
     const resumeLink = document.createElement('a');
     resumeLink.textContent = "Resume";
     resumeLink.href = `${baseUrl}/content/about/resume.pdf`;
@@ -60,13 +69,13 @@ function buildNavigation() {
         console.log('Resume viewed');
     };
     nav.appendChild(resumeLink);
-    
-    // Sections with headers
+
+    // Create section headers and links
     for (const [section, content] of Object.entries(structure)) {
         const header = document.createElement('h2');
         header.textContent = section;
         nav.appendChild(header);
-        
+
         content.pages.forEach(page => {
             const link = document.createElement('a');
             link.textContent = page.title;
@@ -79,29 +88,33 @@ function buildNavigation() {
     }
 }
 
+/*==============================================
+            CONTENT MANAGEMENT
+================================================*/
+// Load content from markdown files
 async function loadContent(path) {
     try {
         const response = await fetch(path);
         if (!response.ok) throw new Error('Content not found');
         const content = await response.text();
-        
+
         const contentElement = document.getElementById('content');
         contentElement.classList.add('loading');
-        
+
         contentElement.innerHTML = marked.parse(content);
-        
+
         contentElement.classList.remove('loading');
-        
+
         window.scrollTo(0, 0);
-        
-        // Update sidebar active state
+
+        // Update UI states
         updateSidebarForContent(path);
-        
+
         const basePathname = '/portfolio/';
         if (window.location.pathname !== basePathname) {
             history.pushState({path: path}, '', basePathname);
         }
-        
+
         updateDocumentTitle(path);
     } catch (error) {
         console.error('Error loading content:', error);
@@ -114,20 +127,17 @@ async function loadContent(path) {
     }
 }
 
-
+// Update sidebar active state based on content
 function updateSidebarForContent(contentPath) {
     const nav = document.getElementById('main-nav');
     const links = nav.getElementsByTagName('a');
-    
-    // Extract the folder name from the content path
+
     const folderMatch = contentPath.match(/\/([^\/]+)\/content\.md$/);
     if (!folderMatch) return;
-    
+
     const folderName = folderMatch[1];
-    
-    // Find and activate the corresponding link
+
     for (const link of links) {
-        // Check if the link's onclick handler contains this folder
         if (link.onclick && link.onclick.toString().includes(folderName)) {
             setActiveLink(link);
             break;
@@ -135,10 +145,9 @@ function updateSidebarForContent(contentPath) {
     }
 }
 
-// Helper function to update document title
+// Update document title based on current page
 function updateDocumentTitle(path) {
     let title = 'Daniel Noam';
-    // Extract page name from path and add to title
     const pageName = path.split('/').pop().replace('content.md', '').replace(/-/g, ' ');
     if (pageName) {
         title = `${pageName.charAt(0).toUpperCase() + pageName.slice(1)} | ${title}`;
@@ -146,14 +155,10 @@ function updateDocumentTitle(path) {
     document.title = title;
 }
 
-// Handle browser back/forward
-window.onpopstate = (event) => {
-    if (event.state && event.state.path) {
-        loadContent(event.state.path);
-    }
-};
-
-// Mobile menu toggle
+/*==============================================
+            MOBILE MENU HANDLING
+================================================*/
+// Initialize mobile menu functionality
 function initMobileMenu() {
     const menuToggle = document.querySelector('.menu-toggle');
     const sidebar = document.querySelector('.sidebar');
@@ -164,7 +169,6 @@ function initMobileMenu() {
             document.body.classList.toggle('menu-open');
         });
 
-        // Close menu when clicking outside
         document.addEventListener('click', (event) => {
             if (!sidebar.contains(event.target) &&
                 !menuToggle.contains(event.target) &&
@@ -176,7 +180,10 @@ function initMobileMenu() {
     }
 }
 
-// Back to top button functionality
+/*==============================================
+            SCROLL TO TOP FUNCTIONALITY
+================================================*/
+// Show/hide back to top button
 window.onscroll = function() {
     const button = document.getElementById("back-to-top");
     if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
@@ -186,7 +193,7 @@ window.onscroll = function() {
     }
 };
 
-// Back to top button click handler
+// Handle back to top button click
 document.getElementById("back-to-top").onclick = function() {
     window.scrollTo({
         top: 0,
@@ -194,18 +201,28 @@ document.getElementById("back-to-top").onclick = function() {
     });
 };
 
-// Handle page load and refresh
+/*==============================================
+            BROWSER HISTORY HANDLING
+================================================*/
+// Handle browser back/forward navigation
+window.onpopstate = (event) => {
+    if (event.state && event.state.path) {
+        loadContent(event.state.path);
+    }
+};
+
+/*==============================================
+            INITIALIZATION
+================================================*/
+// Handle initial page load
 window.onload = function() {
     const currentPath = window.location.pathname;
     if (currentPath === '/portfolio/' || currentPath === '/portfolio/index.html') {
-        // Load default content
         loadContent(`${baseUrl}/content/about/content.md`);
     } else {
-        // Load content based on current path
         loadContent(`${baseUrl}${currentPath}`);
     }
-    
-    // Update active link based on current path
+
     const links = document.querySelectorAll('nav a');
     links.forEach(link => {
         if (link.getAttribute('href') === currentPath) {
@@ -218,13 +235,11 @@ window.onload = function() {
 document.addEventListener('DOMContentLoaded', () => {
     buildNavigation();
     initMobileMenu();
-    
-    // Set initial state
+
     const initialPath = `${baseUrl}/content/about/content.md`;
     loadContent(initialPath);
     history.replaceState({path: initialPath}, '', '/portfolio/');
-    
-    // Set about link as initially active
+
     const aboutLink = document.querySelector('nav a');
     if (aboutLink) setActiveLink(aboutLink);
 });
