@@ -157,18 +157,20 @@ window.onpopstate = (event) => {
 function initMobileMenu() {
     const menuToggle = document.querySelector('.menu-toggle');
     const sidebar = document.querySelector('.sidebar');
-    
+
     if (menuToggle && sidebar) {
         menuToggle.addEventListener('click', () => {
             sidebar.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
         });
-        
+
         // Close menu when clicking outside
         document.addEventListener('click', (event) => {
-            if (!sidebar.contains(event.target) && 
-                !menuToggle.contains(event.target) && 
+            if (!sidebar.contains(event.target) &&
+                !menuToggle.contains(event.target) &&
                 sidebar.classList.contains('active')) {
                 sidebar.classList.remove('active');
+                document.body.classList.remove('menu-open');
             }
         });
     }
