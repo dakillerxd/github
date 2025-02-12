@@ -2,12 +2,36 @@
                 ROOT VARIABLES
 ================================================*/
 :root {
+    /* Static Variables */
+    --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
     --bg-dark: #1a1d21;
     --text-light: #ffffff;
     --text-gray: #a0a0a0;
     --sidebar-width: 255px;
     --primary-blue: #4a9eff;
     --secondary-blue: #77b6ff;
+
+    /* Dynamic Theme Variables */
+    --bg-color: var(--bg-dark);
+    --text-color: var(--text-light);
+    --sidebar-bg: rgba(0, 0, 0, 0.5);
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --heading-color: var(--primary-blue);
+    --subheading-color: var(--secondary-blue);
+    --link-color: var(--text-gray);
+    --link-hover-color: var(--text-light);
+}
+
+/* Light Mode Overrides */
+:root.light-mode {
+    --bg-color: #ffffff;
+    --text-color: #1a1d21;
+    --sidebar-bg: rgba(0, 0, 0, 0.1);
+    --card-bg: rgba(0, 0, 0, 0.05);
+    --heading-color: #2a7adf;
+    --subheading-color: #4a9eff;
+    --link-color: #666666;
+    --link-hover-color: #333333;
 }
 
 /*==============================================
@@ -20,11 +44,12 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-    background-color: var(--bg-dark);
-    color: var(--text-light);
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-color);
     display: flex;
     min-height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 /*==============================================
@@ -32,20 +57,20 @@ body {
 ================================================*/
 .sidebar {
     width: var(--sidebar-width);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: var(--sidebar-bg);
     padding: 2rem;
     position: fixed;
     height: 100vh;
     overflow-y: auto;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-    transition: transform 0.3s ease;
+    font-family: var(--font-family);
+    transition: background-color 0.3s, transform 0.3s ease;
 }
 
 .name {
     font-size: 1.5rem;
     margin-bottom: 2rem;
     font-weight: bold;
-    color: #fff;
+    color: var(--text-color);
 }
 
 /* Navigation Links */
@@ -56,7 +81,7 @@ nav {
 }
 
 nav a {
-    color: var(--text-gray);
+    color: var(--link-color);
     text-decoration: none;
     padding: 0.3rem 0;
     transition: color 0.2s;
@@ -67,11 +92,11 @@ nav a {
 }
 
 nav a:hover {
-    color: var(--text-light);
+    color: var(--link-hover-color);
 }
 
 nav a.active {
-    color: var(--text-light);
+    color: var(--text-color);
     position: relative;
 }
 
@@ -91,7 +116,7 @@ nav h2 {
     font-size: 0.9rem;
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;
-    color: var(--primary-blue);
+    color: var(--heading-color);
     font-weight: bold;
     letter-spacing: 2px;
 }
@@ -99,7 +124,6 @@ nav h2 {
 /*==============================================
             MAIN CONTENT STYLES
 ================================================*/
-
 main {
     margin-left: var(--sidebar-width);
     flex-grow: 1;
@@ -107,7 +131,7 @@ main {
     margin-right: auto;
     margin-left: auto;
     padding: 2rem 2rem 2rem 250px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    font-family: var(--font-family);
 }
 
 #content {
@@ -130,7 +154,7 @@ main {
     font-size: 3rem;
     margin-bottom: 2rem;
     text-align: center;
-    color: var(--primary-blue);
+    color: var(--heading-color);
     font-weight: 300;
 }
 
@@ -138,7 +162,7 @@ main {
     font-size: 2rem;
     margin: 2rem 0 1rem 0;
     text-align: center;
-    color: var(--secondary-blue);
+    color: var(--subheading-color);
 }
 
 .page-content p {
@@ -146,7 +170,7 @@ main {
     margin-bottom: 1.5rem;
     text-align: center;
     font-size: 1.1rem;
-    color: #e0e0e0;
+    color: var(--text-color);
 }
 
 .page-content img {
@@ -175,12 +199,12 @@ main {
             PROJECT CARD STYLES
 ================================================*/
 .project-card {
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--card-bg);
     border-radius: 10px;
     padding: 2rem;
     margin-bottom: 2rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s;
 }
 
 .project-card:hover {
@@ -189,8 +213,8 @@ main {
 }
 
 .project-card h2 {
-    color: var(--primary-blue);
-    border-bottom: 2px solid var(--primary-blue);
+    color: var(--heading-color);
+    border-bottom: 2px solid var(--heading-color);
     padding-bottom: 0.5rem;
 }
 
@@ -200,18 +224,9 @@ main {
 .image-gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    row-gap: 0rem;
-    column-gap: 1rem;
+    gap: 1rem;
     margin: 1rem auto;
     max-width: fit-content;
-    justify-content: center;
-    justify-items: center;
-}
-
-.image-gallery a {
-    display: block;
-    text-decoration: none;
-    color: inherit;
 }
 
 .image-gallery img {
@@ -221,7 +236,7 @@ main {
     object-fit: contain;
     border-radius: 8px;
     transition: transform 0.2s;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: var(--card-bg);
     max-width: 400px;
 }
 
@@ -230,31 +245,31 @@ main {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
-.image-gallery figure {
-    position: relative;
-    margin: 0;
-}
-
-.image-gallery figure:hover figcaption {
-    opacity: 1;
-}
-
-.image-gallery figcaption {
+/*==============================================
+            THEME TOGGLE STYLES
+================================================*/
+.theme-toggle {
     position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 5px 10px;
-    border-radius: 4px;
+    bottom: 2rem;
+    left: 2rem;
+    right: 2rem;
+    padding: 0.75rem;
+    background: none;
+    border: 1px solid var(--link-color);
+    border-radius: 8px;
+    color: var(--text-color);
+    cursor: pointer;
     font-size: 0.9rem;
-    opacity: 0;
-    transition: opacity 0.2s;
-    white-space: nowrap;
-    pointer-events: none;
-    text-align: center;
-    z-index: 1;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.theme-toggle:hover {
+    background-color: var(--card-bg);
+    border-color: var(--text-color);
 }
 
 /*==============================================
@@ -281,7 +296,7 @@ main {
     z-index: 1001;
     background: none;
     border: none;
-    color: var(--text-light);
+    color: var(--text-color);
     font-size: 1.5rem;
     cursor: pointer;
     padding: 0.5rem;
@@ -317,12 +332,11 @@ main {
             RESPONSIVE DESIGN
 ================================================*/
 @media (max-width: 768px) {
-    /* Sidebar Mobile Styles */
     .sidebar {
         transform: translateX(-100%);
         z-index: 1000;
         width: 100%;
-        background-color: rgba(0, 0, 0, 0.9);
+        background-color: var(--sidebar-bg);
         padding-top: 4rem;
     }
 
@@ -330,46 +344,34 @@ main {
         transform: translateX(0);
     }
 
-    /* Menu Toggle Mobile Styles */
     .menu-toggle {
         display: block;
-        position: fixed;
-        top: 1rem;
-        left: 1rem;
-        z-index: 1001;
-        background: rgba(0, 0, 0, 0.5);
+        background: var(--card-bg);
         padding: 0.5rem 0.75rem;
         border-radius: 4px;
     }
 
-    /* Prevent body scroll when menu is open */
     body.menu-open {
         overflow: hidden;
     }
 
-    /* Main Content Mobile Styles */
     main {
         padding-left: 1rem;
         padding-right: 1rem;
         margin-left: 0;
     }
 
-    /* Typography Mobile Adjustments */
-    .page-content h1 {
-        font-size: 2.5rem;
+    .theme-toggle {
+        position: fixed;
+        bottom: 1rem;
+        left: 1rem;
+        right: 1rem;
     }
 
-    .page-content h2 {
-        font-size: 1.8rem;
-    }
-
-    /* Image Gallery Mobile Adjustments */
     .image-gallery {
         grid-template-columns: 1fr;
-        gap: 1rem;
     }
 
-    /* Back to Top Button Mobile Adjustments */
     #back-to-top {
         bottom: 20px;
         right: 20px;

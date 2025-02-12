@@ -11,17 +11,20 @@
     <script src="main.js" defer></script>
 </head>
 <body>
-    <button class="menu-toggle" aria-label="Toggle menu">☰</button>
-    <div class="sidebar">
-        <h1 class="name">DANIEL NOAM</h1>
-        <nav id="main-nav"></nav>
+<button class="menu-toggle" aria-label="Toggle menu">☰</button>
+<div class="sidebar">
+    <h1 class="name">DANIEL NOAM</h1>
+    <nav id="main-nav"></nav>
+    <button id="theme-toggle" class="theme-toggle">
+        <span class="theme-icon">☀️</span>
+        <span class="theme-text">Light Mode</span>
+    </button>
+</div>
+<main>
+    <div id="content">
+        <!-- Content will be loaded here -->
     </div>
-    <main>
-        <div id="content">
-            <!-- Content will be loaded here -->
-        </div>
-    </main>
-    <!-- Move back-to-top button inside body tag -->
-    <button id="back-to-top" title="Back to top">↑</button>
+</main>
+<button id="back-to-top" title="Back to top">↑</button>
 </body>
 </html>

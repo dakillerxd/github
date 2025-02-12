@@ -35,10 +35,8 @@ const structure = {
 /*==============================================
             NAVIGATION MANAGEMENT
 ================================================*/
-// Track active link
 let activeLink = null;
 
-// Set active link in navigation
 function setActiveLink(link) {
     if (activeLink) {
         activeLink.classList.remove('active');
@@ -49,7 +47,6 @@ function setActiveLink(link) {
     }
 }
 
-// Find navigation link by content path
 function findNavigationLink(contentPath) {
     const nav = document.getElementById('main-nav');
     const links = nav.getElementsByTagName('a');
@@ -67,7 +64,6 @@ function findNavigationLink(contentPath) {
     return null;
 }
 
-// Close mobile sidebar
 function closeMobileSidebar() {
     const sidebar = document.querySelector('.sidebar');
     if (sidebar.classList.contains('active')) {
@@ -76,14 +72,12 @@ function closeMobileSidebar() {
     }
 }
 
-// Handle navigation click
 function handleNavigationClick(path, link) {
     loadContent(path);
     setActiveLink(link);
     closeMobileSidebar();
 }
 
-// Update sidebar active state based on content path
 function updateSidebarForContent(contentPath) {
     const link = findNavigationLink(contentPath);
     if (link) {
@@ -92,17 +86,14 @@ function updateSidebarForContent(contentPath) {
     closeMobileSidebar();
 }
 
-// Build navigation structure
 function buildNavigation() {
     const nav = document.getElementById('main-nav');
 
-    // Create About link
     const aboutLink = document.createElement('a');
     aboutLink.textContent = "About";
     aboutLink.onclick = () => handleNavigationClick(`${baseUrl}/content/about/content.md`, aboutLink);
     nav.appendChild(aboutLink);
 
-    // Create Resume link
     const resumeLink = document.createElement('a');
     resumeLink.textContent = "Resume";
     resumeLink.href = `${baseUrl}/content/about/resume.pdf`;
@@ -113,7 +104,6 @@ function buildNavigation() {
     };
     nav.appendChild(resumeLink);
 
-    // Create section headers and links
     for (const [section, content] of Object.entries(structure)) {
         const header = document.createElement('h2');
         header.textContent = section;
@@ -134,7 +124,6 @@ function buildNavigation() {
 /*==============================================
             CONTENT MANAGEMENT
 ================================================*/
-// Load content from markdown files
 async function loadContent(path) {
     try {
         const response = await fetch(path);
@@ -167,7 +156,6 @@ async function loadContent(path) {
     }
 }
 
-// Update document title based on current page
 function updateDocumentTitle(path) {
     let title = 'Daniel Noam';
     const pageName = path.split('/').pop().replace('content.md', '').replace(/-/g, ' ');
@@ -178,9 +166,49 @@ function updateDocumentTitle(path) {
 }
 
 /*==============================================
+            THEME MANAGEMENT
+================================================*/
+function initThemeToggle() {
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = themeToggle.querySelector('.theme-icon');
+    const themeText = themeToggle.querySelector('.theme-text');
+
+    // Check for saved theme preference or system preference
+    const savedTheme = localStorage.getItem('theme');
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const defaultTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+
+    // Apply initial theme
+    document.documentElement.classList.toggle('light-mode', defaultTheme === 'light');
+    updateThemeToggle(defaultTheme === 'light');
+
+    // Theme toggle click handler
+    themeToggle.addEventListener('click', () => {
+        const isLightMode = document.documentElement.classList.toggle('light-mode');
+        localStorage.setItem('theme', isLightMode ? 'light' : 'dark');
+        updateThemeToggle(isLightMode);
+    });
+
+    // Update toggle button appearance
+    function updateThemeToggle(isLight) {
+        themeIcon.textContent = isLight ? '🌙' : '☀️';
+        themeText.textContent = isLight ? 'Dark Mode' : 'Light Mode';
+        themeToggle.setAttribute('aria-label', `Switch to ${isLight ? 'dark' : 'light'} mode`);
+    }
+
+    // Listen for system theme changes
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        if (!localStorage.getItem('theme')) {
+            const isLight = !e.matches;
+            document.documentElement.classList.toggle('light-mode', isLight);
+            updateThemeToggle(isLight);
+        }
+    });
+}
+
+/*==============================================
             MOBILE MENU HANDLING
 ================================================*/
-// Initialize mobile menu functionality
 function initMobileMenu() {
     const menuToggle = document.querySelector('.menu-toggle');
     const sidebar = document.querySelector('.sidebar');
@@ -191,7 +219,6 @@ function initMobileMenu() {
             document.body.classList.toggle('menu-open');
         });
 
-        // Close menu when clicking outside
         document.addEventListener('click', (event) => {
             if (!sidebar.contains(event.target) &&
                 !menuToggle.contains(event.target) &&
@@ -205,7 +232,6 @@ function initMobileMenu() {
 /*==============================================
             SCROLL TO TOP FUNCTIONALITY
 ================================================*/
-// Show/hide back to top button
 window.onscroll = function() {
     const button = document.getElementById("back-to-top");
     if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
@@ -215,7 +241,6 @@ window.onscroll = function() {
     }
 };
 
-// Handle back to top button click
 document.getElementById("back-to-top").onclick = function() {
     window.scrollTo({
         top: 0,
@@ -226,7 +251,6 @@ document.getElementById("back-to-top").onclick = function() {
 /*==============================================
             BROWSER HISTORY HANDLING
 ================================================*/
-// Handle browser back/forward navigation
 window.onpopstate = (event) => {
     if (event.state && event.state.path) {
         loadContent(event.state.path);
@@ -237,7 +261,6 @@ window.onpopstate = (event) => {
 /*==============================================
             INITIALIZATION
 ================================================*/
-// Handle initial page load
 window.onload = function() {
     const currentPath = window.location.pathname;
     if (currentPath === '/portfolio/' || currentPath === '/portfolio/index.html') {
@@ -254,10 +277,10 @@ window.onload = function() {
     });
 };
 
-// Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     buildNavigation();
     initMobileMenu();
+    initThemeToggle();
 
     const initialPath = `${baseUrl}/content/about/content.md`;
     loadContent(initialPath);
@@ -266,7 +289,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const aboutLink = document.querySelector('nav a');
     if (aboutLink) setActiveLink(aboutLink);
 
-    // Make navigation functions globally available for onclick handlers
     window.loadContent = loadContent;
     window.updateSidebarForContent = updateSidebarForContent;
 });
