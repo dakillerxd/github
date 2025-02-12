@@ -2,36 +2,61 @@
                 ROOT VARIABLES
 ================================================*/
 :root {
-    /* Static Variables */
+    /* System Fonts */
     --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-    --bg-dark: #1a1d21;
-    --text-light: #ffffff;
-    --text-gray: #a0a0a0;
+
+    /* Layout Constants */
     --sidebar-width: 255px;
+
+    /* Shared Colors */
     --primary-blue: #4a9eff;
     --secondary-blue: #77b6ff;
 
-    /* Dynamic Theme Variables */
-    --bg-color: var(--bg-dark);
-    --text-color: var(--text-light);
-    --sidebar-bg: rgba(0, 0, 0, 0.5);
-    --card-bg: rgba(255, 255, 255, 0.05);
-    --heading-color: var(--primary-blue);
-    --subheading-color: var(--secondary-blue);
-    --link-color: var(--text-gray);
-    --link-hover-color: var(--text-light);
+    /* Dark Theme Colors */
+    --dark-bg: #1a1d21;
+    --dark-text: #ffffff;
+    --dark-text-secondary: #a0a0a0;
+    --dark-sidebar-bg: rgba(0, 0, 0, 0.5);
+    --dark-card-bg: rgba(255, 255, 255, 0.05);
+    --dark-heading: var(--primary-blue);
+    --dark-subheading: var(--secondary-blue);
+    --dark-link: #a0a0a0;
+    --dark-link-hover: #ffffff;
+
+    /* Light Theme Colors */
+    --light-bg: #ffffff;
+    --light-text: #1a1d21;
+    --light-text-secondary: #666666;
+    --light-sidebar-bg: rgba(0, 0, 0, 0.1);
+    --light-card-bg: rgba(0, 0, 0, 0.05);
+    --light-heading: #2a7adf;
+    --light-subheading: #4a9eff;
+    --light-link: #666666;
+    --light-link-hover: #333333;
+
+    /* Default Theme (Dark) */
+    --bg-color: var(--dark-bg);
+    --text-color: var(--dark-text);
+    --text-secondary: var(--dark-text-secondary);
+    --sidebar-bg: var(--dark-sidebar-bg);
+    --card-bg: var(--dark-card-bg);
+    --heading-color: var(--dark-heading);
+    --subheading-color: var(--dark-subheading);
+    --link-color: var(--dark-link);
+    --link-hover-color: var(--dark-link-hover);
 }
 
 /* Light Mode Overrides */
 :root.light-mode {
-    --bg-color: #ffffff;
-    --text-color: #1a1d21;
-    --sidebar-bg: rgba(0, 0, 0, 0.1);
-    --card-bg: rgba(0, 0, 0, 0.05);
-    --heading-color: #2a7adf;
-    --subheading-color: #4a9eff;
-    --link-color: #666666;
-    --link-hover-color: #333333;
+    --bg-color: var(--light-bg);
+    --text-color: var(--light-text);
+    --text-secondary: var(--light-text-secondary);
+    --sidebar-bg: var(--light-sidebar-bg);
+    --card-bg: var(--light-card-bg);
+    --heading-color: var(--light-heading);
+    --subheading-color: var(--light-subheading);
+    --link-color: var(--light-link);
+    --link-hover-color: var(--light-link-hover);
 }
 
 /*==============================================
