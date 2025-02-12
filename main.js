@@ -43,8 +43,53 @@ function setActiveLink(link) {
     if (activeLink) {
         activeLink.classList.remove('active');
     }
-    link.classList.add('active');
-    activeLink = link;
+    if (link) {
+        link.classList.add('active');
+        activeLink = link;
+    }
+}
+
+// Find navigation link by content path
+function findNavigationLink(contentPath) {
+    const nav = document.getElementById('main-nav');
+    const links = nav.getElementsByTagName('a');
+    const folderMatch = contentPath.match(/\/([^\/]+)\/content\.md$/);
+
+    if (!folderMatch) return null;
+
+    const folderName = folderMatch[1];
+
+    for (const link of links) {
+        if (link.onclick && link.onclick.toString().includes(folderName)) {
+            return link;
+        }
+    }
+    return null;
+}
+
+// Close mobile sidebar
+function closeMobileSidebar() {
+    const sidebar = document.querySelector('.sidebar');
+    if (sidebar.classList.contains('active')) {
+        sidebar.classList.remove('active');
+        document.body.classList.remove('menu-open');
+    }
+}
+
+// Handle navigation click
+function handleNavigationClick(path, link) {
+    loadContent(path);
+    setActiveLink(link);
+    closeMobileSidebar();
+}
+
+// Update sidebar active state based on content path
+function updateSidebarForContent(contentPath) {
+    const link = findNavigationLink(contentPath);
+    if (link) {
+        setActiveLink(link);
+    }
+    closeMobileSidebar();
 }
 
 // Build navigation structure
@@ -54,10 +99,7 @@ function buildNavigation() {
     // Create About link
     const aboutLink = document.createElement('a');
     aboutLink.textContent = "About";
-    aboutLink.onclick = () => {
-        loadContent(`${baseUrl}/content/about/content.md`);
-        setActiveLink(aboutLink);
-    };
+    aboutLink.onclick = () => handleNavigationClick(`${baseUrl}/content/about/content.md`, aboutLink);
     nav.appendChild(aboutLink);
 
     // Create Resume link
@@ -67,6 +109,7 @@ function buildNavigation() {
     resumeLink.target = '_blank';
     resumeLink.onclick = () => {
         console.log('Resume viewed');
+        closeMobileSidebar();
     };
     nav.appendChild(resumeLink);
 
@@ -79,10 +122,10 @@ function buildNavigation() {
         content.pages.forEach(page => {
             const link = document.createElement('a');
             link.textContent = page.title;
-            link.onclick = () => {
-                loadContent(`${baseUrl}/${content.path}/${page.folder}/content.md`);
-                setActiveLink(link);
-            };
+            link.onclick = () => handleNavigationClick(
+                `${baseUrl}/${content.path}/${page.folder}/content.md`,
+                link
+            );
             nav.appendChild(link);
         });
     }
@@ -107,9 +150,6 @@ async function loadContent(path) {
 
         window.scrollTo(0, 0);
 
-        // Update UI states
-        updateSidebarForContent(path);
-
         const basePathname = '/portfolio/';
         if (window.location.pathname !== basePathname) {
             history.pushState({path: path}, '', basePathname);
@@ -124,24 +164,6 @@ async function loadContent(path) {
                 <p>Sorry, the requested content could not be loaded.</p>
             </div>
         `;
-    }
-}
-
-// Update sidebar active state based on content
-function updateSidebarForContent(contentPath) {
-    const nav = document.getElementById('main-nav');
-    const links = nav.getElementsByTagName('a');
-
-    const folderMatch = contentPath.match(/\/([^\/]+)\/content\.md$/);
-    if (!folderMatch) return;
-
-    const folderName = folderMatch[1];
-
-    for (const link of links) {
-        if (link.onclick && link.onclick.toString().includes(folderName)) {
-            setActiveLink(link);
-            break;
-        }
     }
 }
 
@@ -169,12 +191,12 @@ function initMobileMenu() {
             document.body.classList.toggle('menu-open');
         });
 
+        // Close menu when clicking outside
         document.addEventListener('click', (event) => {
             if (!sidebar.contains(event.target) &&
                 !menuToggle.contains(event.target) &&
                 sidebar.classList.contains('active')) {
-                sidebar.classList.remove('active');
-                document.body.classList.remove('menu-open');
+                closeMobileSidebar();
             }
         });
     }
@@ -208,6 +230,7 @@ document.getElementById("back-to-top").onclick = function() {
 window.onpopstate = (event) => {
     if (event.state && event.state.path) {
         loadContent(event.state.path);
+        updateSidebarForContent(event.state.path);
     }
 };
 
@@ -242,4 +265,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const aboutLink = document.querySelector('nav a');
     if (aboutLink) setActiveLink(aboutLink);
+
+    // Make navigation functions globally available for onclick handlers
+    window.loadContent = loadContent;
+    window.updateSidebarForContent = updateSidebarForContent;
 });

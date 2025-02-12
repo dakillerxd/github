@@ -34,6 +34,8 @@ I'm a Game Designer and Programmer who began my journey in game development duri
     </figure>
 </div>
 
+</div>
+
 
 
 
