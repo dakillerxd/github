@@ -399,7 +399,8 @@ main {
         transform: translateX(-100%);
         z-index: 1000;
         width: 100%;
-        background-color: var(--sidebar-bg);
+        background-color: var(--bg-color);
+        backdrop-filter: blur(10px);
         padding-top: 4rem;
     }
 
