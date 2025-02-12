@@ -76,7 +76,8 @@
 
 ### Environmental Elements
 
-- Hazardous obstacles like lava and spikes that make traversal dangerous.- Soft objects that players can jump through from below but land on from above.
+- Hazardous obstacles like lava and spikes that make traversal dangerous.
+- Soft objects that players can jump through from below but land on from above.
 - Crumbling objects that add a sense of urgency and require quick decision-making.
 - Moving platforms that require timing and coordination to navigate.
 - Portals that transport players to different parts of the level or to entirely new areas.
@@ -189,11 +190,13 @@
     
 ## Development Insights
 
-- Through extensive playtesting, refined gameplay mechanics and time pressure to balance challenge, accessibility, and enjoyment
+- Through extensive play testing, refined gameplay mechanics and time pressure to balance challenge, accessibility, and enjoyment
 - Successfully managed project scope to deliver a complete game within academic deadlines
 - Created modular systems for student behaviors and obstacles to enable quick iteration and testing
 - Designed intuitive movement and throwing mechanics that feel satisfying while remaining simple to learn
 - Implemented an audio system with distinct sound cues and triggers to provide player feedback and enhance the game's atmosphere
 
+
+</div>
 </div>
 
