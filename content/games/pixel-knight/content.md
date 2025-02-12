@@ -3,9 +3,9 @@
 # Pixel Knight
 
 
-<a href="https://dakillerxd.github.io/portfolio/assets/pixel-knight/main.png" target="_blank">
-    <img src="https://dakillerxd.github.io/portfolio/assets/pixel-knight/main.png" alt="Game Screenshot">
-</a>
+
+<img src="https://dakillerxd.github.io/portfolio/assets/pixel-knight/main.png" alt="Game Screenshot">
+
 
 
 <div class="project-card">
@@ -20,7 +20,7 @@
 ### Combat System
 - Melee attacks, special abilities (dashing, AOE attack), and a ranged fireball spell create a varied combat experience.
 - Stamina system requires resource management and strategic decision-making during battles.
-### Resource Managment
+### Resource Management
 - Health, stamina, and mana management system challenges players to balance their resources effectively.
 - Healing options, such as consumable potions and rest points, provide players with strategic choices during combat.
 ### Enemy Design
@@ -60,5 +60,6 @@ Developing this project provided me hands-on experience with the core aspects of
             <figcaption>Campfire</figcaption>
         </a>
     </figure>
+</div>
 </div>
 </div>

@@ -3,9 +3,9 @@
 # School These Sh*ts
 
 
-<a href="https://dakillerxd.github.io/portfolio/assets/school-these-shits/main.png" target="_blank">
-    <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/main.png" alt="Game Screenshot">
-</a>
+
+<img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/main.png" alt="Game Screenshot">
+
 
 
 [Play on Itch.io](https://danielnoam.itch.io/school-these-shts)
@@ -117,9 +117,11 @@
 <div class="project-card">
     
 ## Development Insights
-- Through extensive playtesting, refined gameplay mechanics and time pressure to balance challenge, accessibility, and enjoyment
+- Through extensive play testing, refined gameplay mechanics and time pressure to balance challenge, accessibility, and enjoyment
 - Successfully managed project scope to deliver a complete game within academic deadlines
 - Created modular systems for student behaviors and obstacles to enable quick iteration and testing
 - Designed intuitive movement and throwing mechanics that feel satisfying while remaining simple to learn
 - Implemented an audio system with distinct sound cues and triggers to provide player feedback and enhance the game's atmosphere
+</div>
+
 </div>
