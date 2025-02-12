@@ -46,7 +46,6 @@ body {
     margin-bottom: 2rem;
     font-weight: bold;
     color: #fff;
-    animation: slideInLeft 0.6s ease-out forwards;
 }
 
 /* Navigation Links */
@@ -69,7 +68,6 @@ nav a {
 
 nav a:hover {
     color: var(--text-light);
-    transform: translateX(5px);
 }
 
 nav a.active {
@@ -87,7 +85,6 @@ nav a.active::before {
     height: 4px;
     background-color: var(--primary-blue);
     border-radius: 50%;
-    animation: scaleIn 0.3s ease-out forwards;
 }
 
 nav h2 {
@@ -102,6 +99,7 @@ nav h2 {
 /*==============================================
             MAIN CONTENT STYLES
 ================================================*/
+
 main {
     margin-left: var(--sidebar-width);
     flex-grow: 1;
@@ -134,7 +132,6 @@ main {
     text-align: center;
     color: var(--primary-blue);
     font-weight: 300;
-    animation: slideInRight 0.6s ease-out forwards;
 }
 
 .page-content h2 {
@@ -142,8 +139,6 @@ main {
     margin: 2rem 0 1rem 0;
     text-align: center;
     color: var(--secondary-blue);
-    animation: slideInRight 0.6s ease-out forwards;
-    animation-delay: 0.2s;
 }
 
 .page-content p {
@@ -152,8 +147,6 @@ main {
     text-align: center;
     font-size: 1.1rem;
     color: #e0e0e0;
-    animation: fadeIn 0.6s ease-out forwards;
-    animation-delay: 0.3s;
 }
 
 .page-content img {
@@ -163,8 +156,6 @@ main {
     margin: 2.5rem auto;
     border-radius: 8px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    animation: scaleIn 0.5s ease-out forwards;
-    animation-delay: 0.4s;
 }
 
 .page-content ul,
@@ -173,8 +164,6 @@ main {
     margin: 1.5rem auto;
     padding-left: 2rem;
     text-align: left;
-    animation: slideInRight 0.6s ease-out forwards;
-    animation-delay: 0.5s;
 }
 
 .page-content li {
@@ -191,12 +180,11 @@ main {
     padding: 2rem;
     margin-bottom: 2rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: fadeIn 0.6s ease-out forwards;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
@@ -212,16 +200,12 @@ main {
 .image-gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+    row-gap: 0rem;
+    column-gap: 1rem;
     margin: 1rem auto;
     max-width: fit-content;
-}
-
-.image-gallery figure {
-    position: relative;
-    margin: 0;
-    animation: fadeIn 0.6s ease-out forwards;
-    animation-delay: calc(var(--animation-order, 0) * 0.1s);
+    justify-content: center;
+    justify-items: center;
 }
 
 .image-gallery a {
@@ -234,9 +218,9 @@ main {
     width: 100%;
     height: auto;
     min-height: 200px;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.2s;
     background-color: rgba(0, 0, 0, 0.2);
     max-width: 400px;
 }
@@ -244,6 +228,15 @@ main {
 .image-gallery img:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.image-gallery figure {
+    position: relative;
+    margin: 0;
+}
+
+.image-gallery figure:hover figcaption {
+    opacity: 1;
 }
 
 .image-gallery figcaption {
@@ -257,85 +250,11 @@ main {
     border-radius: 4px;
     font-size: 0.9rem;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.2s;
     white-space: nowrap;
     pointer-events: none;
     text-align: center;
     z-index: 1;
-}
-
-.image-gallery figure:hover figcaption {
-    opacity: 1;
-}
-
-/*==============================================
-            ANIMATION KEYFRAMES
-================================================*/
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideInRight {
-    from {
-        opacity: 0;
-        transform: translateX(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes slideInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes scaleIn {
-    from {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-@keyframes spin {
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-/*==============================================
-            LOADING SPINNER
-================================================*/
-.loading-spinner {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 40px;
-    height: 40px;
-    border: 3px solid var(--text-gray);
-    border-radius: 50%;
-    border-top-color: var(--primary-blue);
-    animation: spin 1s ease-in-out infinite;
-    z-index: 1000;
 }
 
 /*==============================================
@@ -344,12 +263,28 @@ main {
 .error-message {
     text-align: center;
     padding: 3rem;
-    animation: fadeIn 0.6s ease-out forwards;
 }
 
 .error-message h1 {
     color: #ff4a4a;
     margin-bottom: 1rem;
+}
+
+/*==============================================
+            MOBILE MENU STYLES
+================================================*/
+.menu-toggle {
+    display: none;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1001;
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
 }
 
 /*==============================================
@@ -371,7 +306,6 @@ main {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     transition: background-color 0.3s, transform 0.3s;
     z-index: 1000;
-    animation: fadeIn 0.3s ease-out forwards;
 }
 
 #back-to-top:hover {
@@ -380,39 +314,23 @@ main {
 }
 
 /*==============================================
-            MOBILE MENU STYLES
-================================================*/
-.menu-toggle {
-    display: none;
-    position: fixed;
-    top: 1rem;
-    left: 1rem;
-    z-index: 1001;
-    background: none;
-    border: none;
-    color: var(--text-light);
-    font-size: 1.5rem;
-    cursor: pointer;
-    padding: 0.5rem;
-}
-
-/*==============================================
             RESPONSIVE DESIGN
 ================================================*/
 @media (max-width: 768px) {
+    /* Sidebar Mobile Styles */
     .sidebar {
         transform: translateX(-100%);
         z-index: 1000;
         width: 100%;
         background-color: rgba(0, 0, 0, 0.9);
         padding-top: 4rem;
-        transition: transform 0.3s ease;
     }
 
     .sidebar.active {
         transform: translateX(0);
     }
 
+    /* Menu Toggle Mobile Styles */
     .menu-toggle {
         display: block;
         position: fixed;
@@ -424,16 +342,19 @@ main {
         border-radius: 4px;
     }
 
+    /* Prevent body scroll when menu is open */
     body.menu-open {
         overflow: hidden;
     }
 
+    /* Main Content Mobile Styles */
     main {
         padding-left: 1rem;
         padding-right: 1rem;
         margin-left: 0;
     }
 
+    /* Typography Mobile Adjustments */
     .page-content h1 {
         font-size: 2.5rem;
     }
@@ -442,11 +363,13 @@ main {
         font-size: 1.8rem;
     }
 
+    /* Image Gallery Mobile Adjustments */
     .image-gallery {
         grid-template-columns: 1fr;
         gap: 1rem;
     }
 
+    /* Back to Top Button Mobile Adjustments */
     #back-to-top {
         bottom: 20px;
         right: 20px;
