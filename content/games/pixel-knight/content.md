@@ -4,7 +4,7 @@
 
 
 
-<img src="https://dakillerxd.github.io/portfolio/assets/pixel-knight/main.png" alt="Game Screenshot">
+<img src="https://danielnoam.github.io/portfolio/assets/pixel-knight/main.png" alt="Game Screenshot">
 
 
 
@@ -43,20 +43,20 @@ Developing this project provided me hands-on experience with the core aspects of
 ## Gallery
 <div class="image-gallery">
     <figure>
-        <a href="https://dakillerxd.github.io/portfolio/assets/pixel-knight/gameplay1.png" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/pixel-knight/gameplay1.png" alt="Campfire before boss battle">
+        <a href="https://danielnoam.github.io/portfolio/assets/pixel-knight/gameplay1.png" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/pixel-knight/gameplay1.png" alt="Campfire before boss battle">
             <figcaption>Campfire before boss battle</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://dakillerxd.github.io/portfolio/assets/pixel-knight/gameplay2.png" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/pixel-knight/gameplay2.png" alt="Main Menu">
+        <a href="https://danielnoam.github.io/portfolio/assets/pixel-knight/gameplay2.png" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/pixel-knight/gameplay2.png" alt="Main Menu">
             <figcaption>Main menu</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://dakillerxd.github.io/portfolio/assets/pixel-knight/gameplay3.png" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/pixel-knight/gameplay3.png" alt="Campfire">
+        <a href="https://danielnoam.github.io/portfolio/assets/pixel-knight/gameplay3.png" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/pixel-knight/gameplay3.png" alt="Campfire">
             <figcaption>Campfire</figcaption>
         </a>
     </figure>

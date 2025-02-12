@@ -16,19 +16,19 @@ I'm a Game Designer and Programmer who began my journey in game development duri
 <div class="image-gallery">
     <figure>
         <a href="#" onclick="loadContent('/portfolio/content/games/2d-platformer/content.md'); updateSidebarForContent('/portfolio/content/games/2d-platformer/content.md'); return false;">
-            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/main.gif" alt="2D Platformer">
+            <img src="https://danielnoam.github.io/portfolio/assets/2d-platformer/main.gif" alt="2D Platformer">
             <figcaption>2D Platformer</figcaption>
         </a>
     </figure>
     <figure>
         <a href="#" onclick="loadContent('/portfolio/content/games/school-these-shits/content.md'); updateSidebarForContent('/portfolio/content/games/school-these-shits/content.md'); return false;">
-            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/main.png" alt="School These Sh*ts">
+            <img src="https://danielnoam.github.io/portfolio/assets/school-these-shits/main.png" alt="School These Sh*ts">
             <figcaption>School These Sh*ts</figcaption>
         </a>
     </figure>
     <figure>
         <a href="#" onclick="loadContent('/portfolio/content/games/pixel-knight/content.md'); updateSidebarForContent('/portfolio/content/games/pixel-knight/content.md'); return false;">
-            <img src="https://dakillerxd.github.io/portfolio/assets/pixel-knight/main.png" alt="Pixel Knight">
+            <img src="https://danielnoam.github.io/portfolio/assets/pixel-knight/main.png" alt="Pixel Knight">
             <figcaption>Pixel Knight</figcaption>
         </a>
     </figure>

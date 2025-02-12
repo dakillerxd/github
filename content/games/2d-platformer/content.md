@@ -3,7 +3,7 @@
 # 2D Platformer
 
 
-<img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/main.gif" alt="Intro">
+<img src="https://danielnoam.github.io/portfolio/assets/2d-platformer/main.gif" alt="Intro">
 
 
 
@@ -31,44 +31,44 @@
 
 <div class="image-gallery">
     <figure>
-        <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/doublejump.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/doublejump.gif" alt="Double jump">
+        <a href="https://danielnoam.github.io/portfolio/assets/2d-platformer/doublejump.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2d-platformer/doublejump.gif" alt="Double jump">
             <figcaption>Double jump</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/wallslide.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/wallslide.gif" alt="Wall slide">
+        <a href="https://danielnoam.github.io/portfolio/assets/2d-platformer/wallslide.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2d-platformer/wallslide.gif" alt="Wall slide">
             <figcaption>Wall slide</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/walljump.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/walljump.gif" alt="Wall jump">
+        <a href="https://danielnoam.github.io/portfolio/assets/2d-platformer/walljump.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2d-platformer/walljump.gif" alt="Wall jump">
             <figcaption>Wall jump</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/variableJump.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/variableJump.gif" alt="Variable jump height">
+        <a href="https://danielnoam.github.io/portfolio/assets/2d-platformer/variableJump.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2d-platformer/variableJump.gif" alt="Variable jump height">
             <figcaption>Variable jump height</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/player1.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/player1.gif" alt="Coyote jump">
+        <a href="https://danielnoam.github.io/portfolio/assets/2d-platformer/player1.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2d-platformer/player1.gif" alt="Coyote jump">
             <figcaption>Coyote jump</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/Physics1.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/Physics1.gif" alt="Predictable movement">
+        <a href="https://danielnoam.github.io/portfolio/assets/2d-platformer/Physics1.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2d-platformer/Physics1.gif" alt="Predictable movement">
             <figcaption>Predictable movement</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/Physics2.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/Physics2.gif" alt="Player acceleration">
+        <a href="https://danielnoam.github.io/portfolio/assets/2d-platformer/Physics2.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2d-platformer/Physics2.gif" alt="Player acceleration">
             <figcaption>Player acceleration</figcaption>
         </a>
     </figure>
@@ -85,26 +85,26 @@
 
 <div class="image-gallery">
     <figure>
-        <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/movingplatform.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/movingplatform.gif" alt="Moving platform">
+        <a href="https://danielnoam.github.io/portfolio/assets/2d-platformer/movingplatform.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2d-platformer/movingplatform.gif" alt="Moving platform">
             <figcaption>Moving platform</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/softPlatform.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/softPlatform.gif" alt="Soft platform">
+        <a href="https://danielnoam.github.io/portfolio/assets/2d-platformer/softPlatform.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2d-platformer/softPlatform.gif" alt="Soft platform">
             <figcaption>Soft platform</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/crumblingobject.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/crumblingobject.gif" alt="Crumbling platform">
+        <a href="https://danielnoam.github.io/portfolio/assets/2d-platformer/crumblingobject.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2d-platformer/crumblingobject.gif" alt="Crumbling platform">
             <figcaption>Crumbling platform</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/spikes.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/spikes.gif" alt="Spikes">
+        <a href="https://danielnoam.github.io/portfolio/assets/2d-platformer/spikes.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2d-platformer/spikes.gif" alt="Spikes">
             <figcaption>Spikes</figcaption>
         </a>
     </figure>
@@ -118,32 +118,32 @@
 
 <div class="image-gallery">
     <figure>
-        <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/Hazard2.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/Hazard2.gif" alt="Platforming puzzle">
+        <a href="https://danielnoam.github.io/portfolio/assets/2d-platformer/Hazard2.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2d-platformer/Hazard2.gif" alt="Platforming puzzle">
             <figcaption>Platforming puzzle</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/Hazard3.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/Hazard3.gif" alt="Unique level mechanics">
+        <a href="https://danielnoam.github.io/portfolio/assets/2d-platformer/Hazard3.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2d-platformer/Hazard3.gif" alt="Unique level mechanics">
             <figcaption>Unique level mechanics</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/hiddenarea.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/hiddenarea.gif" alt="Hidden collectible">
+        <a href="https://danielnoam.github.io/portfolio/assets/2d-platformer/hiddenarea.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2d-platformer/hiddenarea.gif" alt="Hidden collectible">
             <figcaption>Hidden collectible</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/hazard1.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/hazard1.gif" alt="Platforming puzzle">
+        <a href="https://danielnoam.github.io/portfolio/assets/2d-platformer/hazard1.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2d-platformer/hazard1.gif" alt="Platforming puzzle">
             <figcaption>Platforming puzzle</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/hazard4.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/hazard4.gif" alt="Platforming puzzle">
+        <a href="https://danielnoam.github.io/portfolio/assets/2d-platformer/hazard4.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2d-platformer/hazard4.gif" alt="Platforming puzzle">
             <figcaption>Platforming puzzle</figcaption>
         </a>
     </figure>
@@ -158,26 +158,26 @@
 
 <div class="image-gallery">
     <figure>
-        <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/camera1.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/camera1.gif" alt="Different camera states">
+        <a href="https://danielnoam.github.io/portfolio/assets/2d-platformer/camera1.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2d-platformer/camera1.gif" alt="Different camera states">
             <figcaption>Different camera states</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/camera2.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/camera2.gif" alt="Smooth zooming">
+        <a href="https://danielnoam.github.io/portfolio/assets/2d-platformer/camera2.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2d-platformer/camera2.gif" alt="Smooth zooming">
             <figcaption>Smooth zooming</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/camera3.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/camera3.gif" alt="Smooth camera transitions">
+        <a href="https://danielnoam.github.io/portfolio/assets/2d-platformer/camera3.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2d-platformer/camera3.gif" alt="Smooth camera transitions">
             <figcaption>Smooth camera transitions</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://dakillerxd.github.io/portfolio/assets/2d-platformer/camera4.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/2d-platformer/camera4.gif" alt="Different camera states">
+        <a href="https://danielnoam.github.io/portfolio/assets/2d-platformer/camera4.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/2d-platformer/camera4.gif" alt="Different camera states">
             <figcaption>Different camera states</figcaption>
         </a>
     </figure>

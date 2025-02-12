@@ -4,7 +4,7 @@
 
 
 
-<img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/main.png" alt="Game Screenshot">
+<img src="https://danielnoam.github.io/portfolio/assets/school-these-shits/main.png" alt="Game Screenshot">
 
 
 
@@ -26,32 +26,32 @@
 
 <div class="image-gallery">
     <figure>
-        <a href="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay2.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay2.gif" alt="Various shortcuts">
+        <a href="https://danielnoam.github.io/portfolio/assets/school-these-shits/gameplay2.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/school-these-shits/gameplay2.gif" alt="Various shortcuts">
             <figcaption>Various shortcuts</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay3.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay3.gif" alt="Some objects can break">
+        <a href="https://danielnoam.github.io/portfolio/assets/school-these-shits/gameplay3.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/school-these-shits/gameplay3.gif" alt="Some objects can break">
             <figcaption>Some objects can break</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://dakillerxd.github.io/portfolio/assets/school-these-shits/trickshot.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/trickshot.gif" alt="Trickshots!">
+        <a href="https://danielnoam.github.io/portfolio/assets/school-these-shits/trickshot.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/school-these-shits/trickshot.gif" alt="Trickshots!">
             <figcaption>Trickshots!</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://dakillerxd.github.io/portfolio/assets/school-these-shits/mission1.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/mission1.gif" alt="Student's mission">
+        <a href="https://danielnoam.github.io/portfolio/assets/school-these-shits/mission1.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/school-these-shits/mission1.gif" alt="Student's mission">
             <figcaption>Student's mission</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://dakillerxd.github.io/portfolio/assets/school-these-shits/mission2.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/mission2.gif" alt="Student's mission">
+        <a href="https://danielnoam.github.io/portfolio/assets/school-these-shits/mission2.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/school-these-shits/mission2.gif" alt="Student's mission">
             <figcaption>Student's mission</figcaption>
         </a>
     </figure>
@@ -63,32 +63,32 @@
 
 <div class="image-gallery">
     <figure>
-        <a href="https://dakillerxd.github.io/portfolio/assets/school-these-shits/layout1.png" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/layout1.png" alt="Soccer field">
+        <a href="https://danielnoam.github.io/portfolio/assets/school-these-shits/layout1.png" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/school-these-shits/layout1.png" alt="Soccer field">
             <figcaption>Soccer field</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://dakillerxd.github.io/portfolio/assets/school-these-shits/layout2.png" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/layout2.png" alt="Outdoor sitting area">
+        <a href="https://danielnoam.github.io/portfolio/assets/school-these-shits/layout2.png" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/school-these-shits/layout2.png" alt="Outdoor sitting area">
             <figcaption>Outdoor sitting area</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://dakillerxd.github.io/portfolio/assets/school-these-shits/layout3.png" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/layout3.png" alt="Library">
+        <a href="https://danielnoam.github.io/portfolio/assets/school-these-shits/layout3.png" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/school-these-shits/layout3.png" alt="Library">
             <figcaption>Library</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://dakillerxd.github.io/portfolio/assets/school-these-shits/layout4.png" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/layout4.png" alt="Teacher's lounge">
+        <a href="https://danielnoam.github.io/portfolio/assets/school-these-shits/layout4.png" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/school-these-shits/layout4.png" alt="Teacher's lounge">
             <figcaption>Teacher's lounge</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://dakillerxd.github.io/portfolio/assets/school-these-shits/layout5.png" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/layout5.png" alt="Principal's office">
+        <a href="https://danielnoam.github.io/portfolio/assets/school-these-shits/layout5.png" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/school-these-shits/layout5.png" alt="Principal's office">
             <figcaption>Principal's office</figcaption>
         </a>
     </figure>
@@ -100,14 +100,14 @@
 
 <div class="image-gallery">
     <figure>
-        <a href="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay1.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay1.gif" alt="Difficulty levels">
+        <a href="https://danielnoam.github.io/portfolio/assets/school-these-shits/gameplay1.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/school-these-shits/gameplay1.gif" alt="Difficulty levels">
             <figcaption>Difficulty levels</figcaption>
         </a>
     </figure>
     <figure>
-        <a href="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay4.gif" target="_blank">
-            <img src="https://dakillerxd.github.io/portfolio/assets/school-these-shits/gameplay4.gif" alt="School bells rings">
+        <a href="https://danielnoam.github.io/portfolio/assets/school-these-shits/gameplay4.gif" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/school-these-shits/gameplay4.gif" alt="School bells rings">
             <figcaption>School bells rings</figcaption>
         </a>
     </figure>
