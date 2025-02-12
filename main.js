@@ -94,13 +94,14 @@ async function loadContent(path) {
         
         window.scrollTo(0, 0);
         
-        // Instead of pushing the full path to history, just keep the base URL
+        // Update sidebar active state
+        updateSidebarForContent(path);
+        
         const basePathname = '/portfolio/';
         if (window.location.pathname !== basePathname) {
             history.pushState({path: path}, '', basePathname);
         }
         
-        // Update document title without changing URL
         updateDocumentTitle(path);
     } catch (error) {
         console.error('Error loading content:', error);
@@ -110,6 +111,27 @@ async function loadContent(path) {
                 <p>Sorry, the requested content could not be loaded.</p>
             </div>
         `;
+    }
+}
+
+
+function updateSidebarForContent(contentPath) {
+    const nav = document.getElementById('main-nav');
+    const links = nav.getElementsByTagName('a');
+    
+    // Extract the folder name from the content path
+    const folderMatch = contentPath.match(/\/([^\/]+)\/content\.md$/);
+    if (!folderMatch) return;
+    
+    const folderName = folderMatch[1];
+    
+    // Find and activate the corresponding link
+    for (const link of links) {
+        // Check if the link's onclick handler contains this folder
+        if (link.onclick && link.onclick.toString().includes(folderName)) {
+            setActiveLink(link);
+            break;
+        }
     }
 }
 
