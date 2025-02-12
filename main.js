@@ -13,7 +13,7 @@ const structure = {
             { title: "School These Shits", folder: "school-these-shits" },
             { title: "Pixel Knight", folder: "pixel-knight" }
         ]
-    },
+    }
     // Commented sections for future use
     // "PROTOTYPES/GAMEJAMS": {
     //     path: "content/prototypes",
@@ -49,24 +49,6 @@ function setActiveLink(link) {
     }
 }
 
-// Find navigation link by content path
-function findNavigationLink(contentPath) {
-    const nav = document.getElementById('main-nav');
-    const links = nav.getElementsByTagName('a');
-    const folderMatch = contentPath.match(/\/([^\/]+)\/content\.md$/);
-
-    if (!folderMatch) return null;
-
-    const folderName = folderMatch[1];
-
-    for (const link of links) {
-        if (link.onclick && link.onclick.toString().includes(folderName)) {
-            return link;
-        }
-    }
-    return null;
-}
-
 // Close mobile sidebar
 function closeMobileSidebar() {
     const sidebar = document.querySelector('.sidebar');
@@ -83,13 +65,22 @@ function handleNavigationClick(path, link) {
     closeMobileSidebar();
 }
 
-// Update sidebar active state based on content path
-function updateSidebarForContent(contentPath) {
-    const link = findNavigationLink(contentPath);
-    if (link) {
-        setActiveLink(link);
+// Find navigation link by content path
+function findNavigationLink(contentPath) {
+    const nav = document.getElementById('main-nav');
+    const links = nav.getElementsByTagName('a');
+    const folderMatch = contentPath.match(/\/([^\/]+)\/content\.md$/);
+
+    if (!folderMatch) return null;
+
+    const folderName = folderMatch[1];
+
+    for (const link of links) {
+        if (link.onclick && link.onclick.toString().includes(folderName)) {
+            return link;
+        }
     }
-    closeMobileSidebar();
+    return null;
 }
 
 // Build navigation structure
@@ -134,21 +125,48 @@ function buildNavigation() {
 /*==============================================
             CONTENT MANAGEMENT
 ================================================*/
+// Animate content elements
+function animateContent() {
+    // Set animation order for gallery items
+    const galleryItems = document.querySelectorAll('.image-gallery figure');
+    galleryItems.forEach((item, index) => {
+        item.style.setProperty('--animation-order', index);
+    });
+
+    // Add hover effects to interactive elements
+    const interactiveElements = document.querySelectorAll('.image-gallery figure, .project-card');
+    interactiveElements.forEach(element => {
+        element.classList.add('hover-lift');
+    });
+}
+
 // Load content from markdown files
 async function loadContent(path) {
     try {
+        // Show loading spinner
+        const contentElement = document.getElementById('content');
+        contentElement.innerHTML = '<div class="loading-spinner"></div>';
+        contentElement.classList.add('loading');
+
         const response = await fetch(path);
         if (!response.ok) throw new Error('Content not found');
         const content = await response.text();
 
-        const contentElement = document.getElementById('content');
-        contentElement.classList.add('loading');
-
+        // Parse and inject content with fade effect
+        contentElement.style.opacity = '0';
         contentElement.innerHTML = marked.parse(content);
 
+        // Remove loading state and trigger animations
         contentElement.classList.remove('loading');
+        requestAnimationFrame(() => {
+            contentElement.style.opacity = '1';
+            animateContent();
+        });
 
         window.scrollTo(0, 0);
+
+        // Update UI states
+        updateSidebarForContent(path);
 
         const basePathname = '/portfolio/';
         if (window.location.pathname !== basePathname) {
@@ -165,6 +183,15 @@ async function loadContent(path) {
             </div>
         `;
     }
+}
+
+// Update sidebar active state based on content
+function updateSidebarForContent(contentPath) {
+    const link = findNavigationLink(contentPath);
+    if (link) {
+        setActiveLink(link);
+    }
+    closeMobileSidebar();
 }
 
 // Update document title based on current page
