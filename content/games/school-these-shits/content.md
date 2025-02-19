@@ -8,7 +8,7 @@
 
 
 
-[Play on Itch.io](https://danielnoam.itch.io/school-these-shts)
+[Itch.io](https://danielnoam.itch.io/school-these-shts)
 
 <div class="project-card">
     
