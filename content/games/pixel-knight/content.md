@@ -4,7 +4,7 @@
 
 
 
-<img src="https://danielnoam.github.io/portfolio/assets/pixel-knight/main.png" alt="Game Screenshot">
+<img src="https://danielnoam.github.io/portfolio/assets/pixel-knight/fireplace.gif" alt="Game Screenshot">
 
 
 
@@ -44,8 +44,8 @@ Developing this project provided me hands-on experience with the core aspects of
 <div class="image-gallery">
     <figure>
         <a href="https://danielnoam.github.io/portfolio/assets/pixel-knight/gameplay1.png" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/pixel-knight/gameplay1.png" alt="Campfire before boss battle">
-            <figcaption>Campfire before boss battle</figcaption>
+            <img src="https://danielnoam.github.io/portfolio/assets/pixel-knight/gameplay1.png" alt="Campfire">
+            <figcaption>Campfire</figcaption>
         </a>
     </figure>
     <figure>
@@ -55,9 +55,9 @@ Developing this project provided me hands-on experience with the core aspects of
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/pixel-knight/gameplay3.png" target="_blank">
-            <img src="https://danielnoam.github.io/portfolio/assets/pixel-knight/gameplay3.png" alt="Campfire">
-            <figcaption>Campfire</figcaption>
+        <a href="https://danielnoam.github.io/portfolio/assets/pixel-knight/main.png" target="_blank">
+            <img src="https://danielnoam.github.io/portfolio/assets/pixel-knight/main.png" alt="Boss battle">
+            <figcaption>Boss battle</figcaption>
         </a>
     </figure>
 </div>
