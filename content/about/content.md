@@ -28,7 +28,7 @@ I'm a Game Designer and Programmer who began my journey in game development duri
     </figure>
     <figure>
         <a href="#" onclick="loadContent('/portfolio/content/games/pixel-knight/content.md'); updateSidebarForContent('/portfolio/content/games/pixel-knight/content.md'); return false;">
-            <img src="https://danielnoam.github.io/portfolio/assets/pixel-knight/main.png" alt="Pixel Knight">
+            <img src="https://danielnoam.github.io/portfolio/assets/pixel-knight/fireplace.gif" alt="Pixel Knight">
             <figcaption>Pixel Knight</figcaption>
         </a>
     </figure>
