@@ -144,23 +144,22 @@ async function loadContent(path) {
 
         const contentElement = document.getElementById('content');
         contentElement.classList.add('loading');
-
         contentElement.innerHTML = marked.parse(content);
-
         contentElement.classList.remove('loading');
 
         window.scrollTo(0, 0);
-
-        // Save the current page path - this is new
         saveCurrentPage(path);
 
-        const basePathname = '/portfolio/';
-        if (window.location.pathname !== basePathname) {
-            history.pushState({path: path}, '', basePathname);
+        // Updated history management
+        const currentPath = path.replace(baseUrl, '');  // Remove baseUrl to get relative path
+        const newPath = `/portfolio${currentPath}`;     // Add portfolio prefix
+
+        if (window.location.pathname !== newPath) {
+            history.pushState({path: path}, '', newPath);
         }
 
         updateDocumentTitle(path);
-        updateSidebarForContent(path); // Added this line
+        updateSidebarForContent(path);
     } catch (error) {
         console.error('Error loading content:', error);
         document.getElementById('content').innerHTML = `
@@ -304,18 +303,3 @@ window.onload = function() {
     window.updateSidebarForContent = updateSidebarForContent;
 };
 
-document.addEventListener('DOMContentLoaded', () => {
-    buildNavigation();
-    initMobileMenu();
-    initThemeToggle();
-
-    const initialPath = `${baseUrl}/content/about/content.md`;
-    loadContent(initialPath);
-    history.replaceState({path: initialPath}, '', '/portfolio/');
-
-    const aboutLink = document.querySelector('nav a');
-    if (aboutLink) setActiveLink(aboutLink);
-
-    window.loadContent = loadContent;
-    window.updateSidebarForContent = updateSidebarForContent;
-});
