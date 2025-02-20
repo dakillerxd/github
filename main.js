@@ -24,6 +24,13 @@ const structure = {
             { title: "PopACorn", folder: "popacorn", visible: false },
         ]
     },
+      "Art": {
+        path: "content/art",
+        pages: [
+            { title: "Shaders", folder: "shaders", visible: false },
+            { title: "Blender", folder: "blender", visible: false },
+        ]
+    },
 };
 
 /*==============================================
