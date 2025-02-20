@@ -13,7 +13,7 @@ const structure = {
         pages: [
             { title: "UMD", folder: "umd", visible: false },
             { title: "2D Platformer", folder: "2d-platformer", visible: true },
-            { title: "School These Shits", folder: "school-these-shits", visible: false },
+            { title: "School These Shits", folder: "school-these-shits", visible: true },
             { title: "Pixel Knight", folder: "pixel-knight", visible: true },
         ]
     },
