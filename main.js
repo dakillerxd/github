@@ -98,6 +98,8 @@ function updateSidebarForContent(contentPath) {
 
 function buildNavigation() {
     const nav = document.getElementById('main-nav');
+    // Clear existing content to prevent duplicates
+    nav.innerHTML = '';
 
     const aboutLink = document.createElement('a');
     aboutLink.textContent = "About";
@@ -227,11 +229,13 @@ function initMobileMenu() {
     const sidebar = document.querySelector('.sidebar');
 
     if (menuToggle && sidebar) {
-        menuToggle.addEventListener('click', () => {
+        menuToggle.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevent event bubbling
             sidebar.classList.toggle('active');
             document.body.classList.toggle('menu-open');
         });
 
+        // Close menu when clicking outside
         document.addEventListener('click', (event) => {
             if (!sidebar.contains(event.target) &&
                 !menuToggle.contains(event.target) &&
