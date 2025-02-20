@@ -29,6 +29,7 @@ const structure = {
         pages: [
             { title: "Shaders", folder: "shaders", visible: false },
             { title: "Blender", folder: "blender", visible: false },
+            { title: "Procedural Animations", folder: "proceduralanimations", visible: false },
         ]
     },
 };
