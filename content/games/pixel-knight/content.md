@@ -55,7 +55,7 @@ Developing this project provided me hands-on experience with the core aspects of
         </a>
     </figure>
     <figure>
-        <a href="https://danielnoam.github.io/portfolio/assets/pixel-knight/main.png" target="_blank">
+        <a href="https://danielnoam.github.io/portfolio/assets/pixel-knight/gameplay4.png" target="_blank">
             <img src="https://danielnoam.github.io/portfolio/assets/pixel-knight/gameplay4.png" alt="Boss battle">
             <figcaption>Boss battle</figcaption>
         </a>

@@ -3,6 +3,7 @@
 ================================================*/
 // Base URL for GitHub Pages
 const baseUrl = '/portfolio';
+const defaultPath = `${baseUrl}/content/about/content.md`;
 
 // Project structure configuration
 const structure = {
@@ -240,7 +241,7 @@ window.onpopstate = (event) => {
         if (link) setActiveLink(link);
     } else {
         // If no state, go to About page
-        const defaultPath = `${baseUrl}/content/about/content.md`;
+        
         loadContent(defaultPath);
         const aboutLink = document.querySelector('nav a');
         if (aboutLink) setActiveLink(aboutLink);
@@ -256,7 +257,6 @@ window.onload = function() {
     initThemeToggle();
 
     const currentPath = window.location.pathname;
-    const defaultPath = `${baseUrl}/content/about/content.md`;
 
     // Check if we have a state (from back/forward navigation)
     if (history.state && history.state.path) {
