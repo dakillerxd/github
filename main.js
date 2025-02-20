@@ -291,7 +291,7 @@ window.onpopstate = (event) => {
 /*==============================================
             INITIALIZATION
 ================================================*/
-window.onload = function() {
+window.onload = async function() {
     buildNavigation();
     initMobileMenu();
     initThemeToggle();
@@ -301,27 +301,32 @@ window.onload = function() {
         document.documentElement.classList.add('hide-urls');
     }
 
-    // Apply URL visibility setting
-    if (hideUrls) {
-        document.documentElement.classList.add('hide-urls');
-    }
-
     const currentPath = window.location.pathname;
 
-    // Check if we have a state (from back/forward navigation)
-    if (history.state && history.state.path) {
-        loadContent(history.state.path);
-        const link = findNavigationLink(history.state.path);
-        if (link) setActiveLink(link);
-    }
-    // If we're at the root or direct file access, load About
-    else if (currentPath === '/portfolio/' || currentPath === '/portfolio/index.html') {
-        loadContent(defaultPath);
-        history.replaceState({path: defaultPath}, '', '/portfolio/');
-        const aboutLink = document.querySelector('nav a');
-        if (aboutLink) setActiveLink(aboutLink);
-    } else {
-        // Handle direct file access by redirecting to portfolio root
-        window.location.href = '/portfolio/';
+    try {
+        // Check if we have a state (from back/forward navigation)
+        if (history.state && history.state.path) {
+            await loadContent(history.state.path);
+            const link = findNavigationLink(history.state.path);
+            if (link) setActiveLink(link);
+        }
+        // If we're at the root or direct file access, load About
+        else if (currentPath === '/portfolio/' || currentPath === '/portfolio/index.html') {
+            await loadContent(defaultPath);
+            history.replaceState({path: defaultPath}, '', '/portfolio/');
+            const aboutLink = document.querySelector('nav a');
+            if (aboutLink) setActiveLink(aboutLink);
+        } else {
+            // Handle direct file access by redirecting to portfolio root
+            window.location.href = '/portfolio/';
+        }
+    } catch (error) {
+        console.error('Error during initialization:', error);
+        document.getElementById('content').innerHTML = `
+            <div class="error-message">
+                <h1>Error Loading Content</h1>
+                <p>Sorry, there was an error loading the initial content.</p>
+            </div>
+        `;
     }
 }
