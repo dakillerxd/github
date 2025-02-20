@@ -288,7 +288,7 @@ window.onload = function() {
     const initialPath = storedPath || defaultPath;
 
     loadContent(initialPath);
-    history.replaceState({path: initialPath}, '', '/portfolio/');
+    history.replaceState({path: initialPath}, '', window.location.pathname);
 
     // Update sidebar based on stored path
     if (storedPath) {
@@ -298,8 +298,6 @@ window.onload = function() {
         const aboutLink = document.querySelector('nav a');
         if (aboutLink) setActiveLink(aboutLink);
     }
-
-    window.loadContent = loadContent;
-    window.updateSidebarForContent = updateSidebarForContent;
+    
 };
 

@@ -397,7 +397,7 @@ main {
 @media (max-width: 768px) {
     .sidebar {
         transform: translateX(-100%);
-        z-index: 1000;
+        z-index: 1002;
         width: 100%;
         background-color: var(--bg-color);
         backdrop-filter: blur(10px);
@@ -422,6 +422,7 @@ main {
     main {
         padding-left: 1rem;
         padding-right: 1rem;
+        padding-bottom: 4rem;
         margin-left: 0;
     }
 
