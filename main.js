@@ -4,6 +4,7 @@
 // Base URL for GitHub Pages
 const baseUrl = '/portfolio';
 const defaultPath = `${baseUrl}/content/about/content.md`;
+const siteTitle = 'Daniel Noam - Portfolio';
 
 // Project structure configuration
 const structure = {
@@ -144,7 +145,7 @@ async function loadContent(path) {
 }
 
 function updateDocumentTitle(path) {
-    let title = 'Daniel Noam';
+    let title = siteTitle;
     const pageName = path.split('/').pop().replace('content.md', '').replace(/-/g, ' ');
     if (pageName) {
         title = `${pageName.charAt(0).toUpperCase() + pageName.slice(1)} | ${title}`;
