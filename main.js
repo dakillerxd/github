@@ -20,8 +20,8 @@ const structure = {
     "Prototypes": {
         path: "content/prototypes",
         pages: [
-            { title: "Bubblerena", folder: "bubblerena", visible: true },
-            { title: "PopACorn", folder: "popacorn", visible: true },
+            { title: "Bubblerena - GGJ 2025", folder: "bubblerena", visible: false },
+            { title: "PopACorn", folder: "popacorn", visible: false },
         ]
     },
 };
