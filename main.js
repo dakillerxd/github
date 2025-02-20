@@ -14,31 +14,7 @@ const structure = {
             { title: "Pixel Knight", folder: "pixel-knight" }
         ]
     },
-    // Commented sections for future use
-    // "PROTOTYPES/GAMEJAMS": {
-    //     path: "content/prototypes",
-    //     pages: [
-    //         { title: "Bubblerena - GGJ 2025", folder: "bubblerena" },
-    //         { title: "PopACorn", folder: "fruit-ninja-clone" }
-    //     ]
-    // },
-    // "ART": {
-    //     path: "content/art",
-    //     pages: [
-    //         { title: "Shaders", folder: "shaders" },
-    //         { title: "Procedural Animations", folder: "shaders" },
-    //         { title: "Blender", folder: "blender" }
-    //     ]
-    // }
 };
-
-function saveCurrentPage(path) {
-    sessionStorage.setItem('currentPage', path);
-}
-
-function getStoredPage() {
-    return sessionStorage.getItem('currentPage');
-}
 
 /*==============================================
             NAVIGATION MANAGEMENT
@@ -98,7 +74,6 @@ function updateSidebarForContent(contentPath) {
 
 function buildNavigation() {
     const nav = document.getElementById('main-nav');
-    // Clear existing content to prevent duplicates
     nav.innerHTML = '';
 
     const aboutLink = document.createElement('a');
@@ -148,14 +123,10 @@ async function loadContent(path) {
         contentElement.classList.remove('loading');
 
         window.scrollTo(0, 0);
-        saveCurrentPage(path);
 
-        // Updated history management
-        const currentPath = path.replace(baseUrl, '');  // Remove baseUrl to get relative path
-        const newPath = `/portfolio${currentPath}`;     // Add portfolio prefix
-
-        if (window.location.pathname !== newPath) {
-            history.pushState({path: path}, '', newPath);
+        // Push new state only if it's different from current
+        if (!history.state || history.state.path !== path) {
+            history.pushState({path: path}, '', '/portfolio/');
         }
 
         updateDocumentTitle(path);
@@ -170,6 +141,7 @@ async function loadContent(path) {
         `;
     }
 }
+
 function updateDocumentTitle(path) {
     let title = 'Daniel Noam';
     const pageName = path.split('/').pop().replace('content.md', '').replace(/-/g, ' ');
@@ -187,30 +159,25 @@ function initThemeToggle() {
     const themeIcon = themeToggle.querySelector('.theme-icon');
     const themeText = themeToggle.querySelector('.theme-text');
 
-    // Check for saved theme preference or system preference
     const savedTheme = localStorage.getItem('theme');
     const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     const defaultTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
 
-    // Apply initial theme
     document.documentElement.classList.toggle('light-mode', defaultTheme === 'light');
     updateThemeToggle(defaultTheme === 'light');
 
-    // Theme toggle click handler
     themeToggle.addEventListener('click', () => {
         const isLightMode = document.documentElement.classList.toggle('light-mode');
         localStorage.setItem('theme', isLightMode ? 'light' : 'dark');
         updateThemeToggle(isLightMode);
     });
 
-    // Update toggle button appearance
     function updateThemeToggle(isLight) {
         themeIcon.textContent = isLight ? '🌙' : '☀️';
         themeText.textContent = isLight ? 'Dark Mode' : 'Light Mode';
         themeToggle.setAttribute('aria-label', `Switch to ${isLight ? 'dark' : 'light'} mode`);
     }
 
-    // Listen for system theme changes
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
         if (!localStorage.getItem('theme')) {
             const isLight = !e.matches;
@@ -229,12 +196,11 @@ function initMobileMenu() {
 
     if (menuToggle && sidebar) {
         menuToggle.addEventListener('click', (e) => {
-            e.stopPropagation(); // Prevent event bubbling
+            e.stopPropagation();
             sidebar.classList.toggle('active');
             document.body.classList.toggle('menu-open');
         });
 
-        // Close menu when clicking outside
         document.addEventListener('click', (event) => {
             if (!sidebar.contains(event.target) &&
                 !menuToggle.contains(event.target) &&
@@ -270,7 +236,14 @@ document.getElementById("back-to-top").onclick = function() {
 window.onpopstate = (event) => {
     if (event.state && event.state.path) {
         loadContent(event.state.path);
-        updateSidebarForContent(event.state.path);
+        const link = findNavigationLink(event.state.path);
+        if (link) setActiveLink(link);
+    } else {
+        // If no state, go to About page
+        const defaultPath = `${baseUrl}/content/about/content.md`;
+        loadContent(defaultPath);
+        const aboutLink = document.querySelector('nav a');
+        if (aboutLink) setActiveLink(aboutLink);
     }
 };
 
@@ -282,28 +255,23 @@ window.onload = function() {
     initMobileMenu();
     initThemeToggle();
 
-    // Get the stored page or use current URL path
-    let initialPath;
     const currentPath = window.location.pathname;
+    const defaultPath = `${baseUrl}/content/about/content.md`;
 
-    if (currentPath !== '/portfolio/' && currentPath !== '/portfolio/index.html') {
-        // If we're on a specific page, use that path
-        initialPath = `${baseUrl}${currentPath}`;
-    } else {
-        // Otherwise use stored page or default to About
-        initialPath = getStoredPage() || `${baseUrl}/content/about/content.md`;
+    // Check if we have a state (from back/forward navigation)
+    if (history.state && history.state.path) {
+        loadContent(history.state.path);
+        const link = findNavigationLink(history.state.path);
+        if (link) setActiveLink(link);
     }
-
-    loadContent(initialPath);
-    history.replaceState({path: initialPath}, '', '/portfolio/');
-
-    // Update sidebar based on path
-    const link = findNavigationLink(initialPath);
-    if (link) {
-        setActiveLink(link);
-    } else {
+    // If we're at the root or direct file access, load About
+    else if (currentPath === '/portfolio/' || currentPath === '/portfolio/index.html') {
+        loadContent(defaultPath);
+        history.replaceState({path: defaultPath}, '', '/portfolio/');
         const aboutLink = document.querySelector('nav a');
         if (aboutLink) setActiveLink(aboutLink);
+    } else {
+        // Handle direct file access by redirecting to portfolio root
+        window.location.href = '/portfolio/';
     }
 };
-
