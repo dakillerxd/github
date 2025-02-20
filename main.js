@@ -32,6 +32,14 @@ const structure = {
     // }
 };
 
+function saveCurrentPage(path) {
+    sessionStorage.setItem('currentPage', path);
+}
+
+function getStoredPage() {
+    return sessionStorage.getItem('currentPage');
+}
+
 /*==============================================
             NAVIGATION MANAGEMENT
 ================================================*/
@@ -48,6 +56,8 @@ function setActiveLink(link) {
 }
 
 function findNavigationLink(contentPath) {
+    if (!contentPath) return null;
+
     const nav = document.getElementById('main-nav');
     const links = nav.getElementsByTagName('a');
     const folderMatch = contentPath.match(/\/([^\/]+)\/content\.md$/);
@@ -139,12 +149,16 @@ async function loadContent(path) {
 
         window.scrollTo(0, 0);
 
+        // Save the current page path - this is new
+        saveCurrentPage(path);
+
         const basePathname = '/portfolio/';
         if (window.location.pathname !== basePathname) {
             history.pushState({path: path}, '', basePathname);
         }
 
         updateDocumentTitle(path);
+        updateSidebarForContent(path); // Added this line
     } catch (error) {
         console.error('Error loading content:', error);
         document.getElementById('content').innerHTML = `
@@ -155,7 +169,6 @@ async function loadContent(path) {
         `;
     }
 }
-
 function updateDocumentTitle(path) {
     let title = 'Daniel Noam';
     const pageName = path.split('/').pop().replace('content.md', '').replace(/-/g, ' ');
@@ -262,19 +275,29 @@ window.onpopstate = (event) => {
             INITIALIZATION
 ================================================*/
 window.onload = function() {
-    const currentPath = window.location.pathname;
-    if (currentPath === '/portfolio/' || currentPath === '/portfolio/index.html') {
-        loadContent(`${baseUrl}/content/about/content.md`);
+    buildNavigation();
+    initMobileMenu();
+    initThemeToggle();
+
+    // Get the stored page or use default
+    const storedPath = getStoredPage();
+    const defaultPath = `${baseUrl}/content/about/content.md`;
+    const initialPath = storedPath || defaultPath;
+
+    loadContent(initialPath);
+    history.replaceState({path: initialPath}, '', '/portfolio/');
+
+    // Update sidebar based on stored path
+    if (storedPath) {
+        const link = findNavigationLink(storedPath);
+        if (link) setActiveLink(link);
     } else {
-        loadContent(`${baseUrl}${currentPath}`);
+        const aboutLink = document.querySelector('nav a');
+        if (aboutLink) setActiveLink(aboutLink);
     }
 
-    const links = document.querySelectorAll('nav a');
-    links.forEach(link => {
-        if (link.getAttribute('href') === currentPath) {
-            setActiveLink(link);
-        }
-    });
+    window.loadContent = loadContent;
+    window.updateSidebarForContent = updateSidebarForContent;
 };
 
 document.addEventListener('DOMContentLoaded', () => {
