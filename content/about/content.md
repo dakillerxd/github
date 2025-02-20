@@ -19,7 +19,7 @@ I'm a Game Designer and Programmer who began my journey in game development duri
     </figure>
     <figure>
         <a href="#" onclick="handleNavigationClick(`${baseUrl}/content/games/pixel-knight/content.md`, document.querySelector('a[onclick*=\'pixel-knight\']')); return false;">
-            <img src="https://danielnoam.github.io/portfolio/assets/pixel-knight/fireplace.gif" alt="Pixel Knight">
+            <img src="https://danielnoam.github.io/portfolio/assets/pixel-knight/main.gif" alt="Pixel Knight">
             <figcaption>Pixel Knight</figcaption>
         </a>
     </figure>
