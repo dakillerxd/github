@@ -1,7 +1,6 @@
 /*==============================================
                 CONFIGURATION
 ================================================*/
-// Base URL for GitHub Pages
 const baseUrl = '/portfolio';
 const defaultPath = `${baseUrl}/content/about/content.md`;
 const siteTitle = 'Daniel Noam - Portfolio';
@@ -12,9 +11,17 @@ const structure = {
     "GAMES": {
         path: "content/games",
         pages: [
-            { title: "2D Platformer", folder: "2d-platformer" },
-            { title: "School These Shits", folder: "school-these-shits" },
-            { title: "Pixel Knight", folder: "pixel-knight" }
+            { title: "UMD", folder: "umd", visible: false },
+            { title: "2D Platformer", folder: "2d-platformer", visible: true },
+            { title: "School These Shits", folder: "school-these-shits", visible: false },
+            { title: "Pixel Knight", folder: "pixel-knight", visible: true },
+        ]
+    },
+    "Prototypes": {
+        path: "content/prototypes",
+        pages: [
+            { title: "Bubblerena", folder: "bubblerena", visible: true },
+            { title: "PopACorn", folder: "popcorn", visible: true },
         ]
     },
 };
@@ -95,19 +102,25 @@ function buildNavigation() {
     nav.appendChild(resumeLink);
 
     for (const [section, content] of Object.entries(structure)) {
-        const header = document.createElement('h2');
-        header.textContent = section;
-        nav.appendChild(header);
+        // Only create section if it has visible pages
+        const visiblePages = content.pages.filter(page => page.visible !== false);
 
-        content.pages.forEach(page => {
-            const link = document.createElement('a');
-            link.textContent = page.title;
-            link.onclick = () => handleNavigationClick(
-                `${baseUrl}/${content.path}/${page.folder}/content.md`,
-                link
-            );
-            nav.appendChild(link);
-        });
+        if (visiblePages.length > 0) {
+            const header = document.createElement('h2');
+            header.textContent = section;
+            nav.appendChild(header);
+
+            // Only create links for visible pages
+            visiblePages.forEach(page => {
+                const link = document.createElement('a');
+                link.textContent = page.title;
+                link.onclick = () => handleNavigationClick(
+                    `${baseUrl}/${content.path}/${page.folder}/content.md`,
+                    link
+                );
+                nav.appendChild(link);
+            });
+        }
     }
 }
 
