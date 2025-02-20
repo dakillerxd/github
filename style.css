@@ -13,26 +13,26 @@
     --secondary-blue: #77b6ff;
 
     /* Dark Theme Colors */
-    --dark-bg: #1a1d21;
-    --dark-text: #ffffff;
-    --dark-text-secondary: #a0a0a0;
+    --dark-bg: rgba(26, 29, 33, 1);
+    --dark-text: rgba(255, 255, 255, 1);
+    --dark-text-secondary: rgba(160, 160, 160, 1);
     --dark-sidebar-bg: rgba(0, 0, 0, 0.5);
     --dark-card-bg: rgba(255, 255, 255, 0.05);
     --dark-heading: var(--primary-blue);
     --dark-subheading: var(--secondary-blue);
-    --dark-link: #a0a0a0;
-    --dark-link-hover: #ffffff;
+    --dark-link: rgba(160, 160, 160, 1);
+    --dark-link-hover: rgba(255, 255, 255, 1);
 
     /* Light Theme Colors */
-    --light-bg: #ffffff;
-    --light-text: #1a1d21;
-    --light-text-secondary: #666666;
+    --light-bg: rgba(200, 200, 200, 1);
+    --light-text: rgba(26, 29, 33, 1);
+    --light-text-secondary: rgba(102, 102, 102, 1);
     --light-sidebar-bg: rgba(0, 0, 0, 0.1);
-    --light-card-bg: rgba(0, 0, 0, 0.05);
-    --light-heading: #2a7adf;
-    --light-subheading: #4a9eff;
-    --light-link: #666666;
-    --light-link-hover: #333333;
+    --light-card-bg: rgba(0, 0, 0, 0.1);
+    --light-heading: rgba(42, 122, 223, 1);
+    --light-subheading: rgba(74, 158, 255, 1);
+    --light-link: rgba(102, 102, 102, 1);
+    --light-link-hover: rgba(51, 51, 51, 1);
 
     /* Default Theme (Dark) */
     --bg-color: var(--dark-bg);
@@ -102,7 +102,7 @@ body {
 
 .name {
     font-size: 1.5rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     font-weight: bold;
     color: var(--text-color);
 }
@@ -337,6 +337,7 @@ main {
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
+    z-index: 1003;
 }
 
 .theme-toggle:hover {
@@ -365,7 +366,7 @@ main {
     position: fixed;
     top: 1rem;
     left: 1rem;
-    z-index: 1001;
+    z-index: 1003;
     background-color: var(--bg-color);
     border: 1px solid var(--text-color);         
     color: var(--text-color);
@@ -392,7 +393,7 @@ main {
     font-size: 24px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     transition: background-color 0.3s, transform 0.3s;
-    z-index: 1000;
+    z-index: 1002;
 }
 
 #back-to-top:hover {
@@ -408,7 +409,7 @@ main {
         transform: translateX(-100%);
         z-index: 1002;
         width: 100%;
-        background-color: var(--bg-color);
+        background-color: var(--sidebar-bg);
         backdrop-filter: blur(10px);
         padding-top: 4rem;
     }
@@ -419,7 +420,6 @@ main {
 
     .menu-toggle {
         display: block;
-        z-index: 1003;
         background: var(--card-bg);
         padding: 0.5rem 0.75rem;
         border-radius: 4px;

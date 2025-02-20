@@ -4,7 +4,7 @@
 const baseUrl = '/portfolio';
 const defaultPath = `${baseUrl}/content/about/content.md`;
 const siteTitle = 'Daniel Noam - Portfolio';
-const defaultShowUrls = true;
+const defaultShowUrls = false;
 
 // Project structure configuration
 const structure = {
@@ -211,30 +211,6 @@ function initThemeToggle() {
     });
 }
 
-function initUrlToggle() {
-    const urlToggle = document.getElementById('url-toggle');
-    const savedUrlPreference = localStorage.getItem('showUrls');
-    const showUrls = savedUrlPreference !== null ? savedUrlPreference === 'true' : defaultShowUrls;
-
-    document.documentElement.classList.toggle('hide-urls', !showUrls);
-    updateUrlToggle(showUrls);
-
-    urlToggle.addEventListener('click', () => {
-        const showUrls = !document.documentElement.classList.toggle('hide-urls');
-        localStorage.setItem('showUrls', showUrls);
-        updateUrlToggle(showUrls);
-    });
-}
-
-function updateUrlToggle(showUrls) {
-    const urlToggle = document.getElementById('url-toggle');
-    const urlIcon = urlToggle.querySelector('.url-icon');
-    const urlText = urlToggle.querySelector('.url-text');
-
-    urlIcon.textContent = showUrls ? '🔗' : '🔒';
-    urlText.textContent = showUrls ? 'Hide URLs' : 'Show URLs';
-    urlToggle.setAttribute('aria-label', `${showUrls ? 'Hide' : 'Show'} URLs`);
-}
 
 /*==============================================
             MOBILE MENU HANDLING
@@ -305,7 +281,7 @@ window.onload = async function() {
     initThemeToggle();
 
     // Apply URL visibility setting
-    if (!showUrls) {
+    if (!defaultShowUrls) {
         document.documentElement.classList.add('hide-urls');
     }
 
