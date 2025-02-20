@@ -282,22 +282,28 @@ window.onload = function() {
     initMobileMenu();
     initThemeToggle();
 
-    // Get the stored page or use default
-    const storedPath = getStoredPage();
-    const defaultPath = `${baseUrl}/content/about/content.md`;
-    const initialPath = storedPath || defaultPath;
+    // Get the stored page or use current URL path
+    let initialPath;
+    const currentPath = window.location.pathname;
+
+    if (currentPath !== '/portfolio/' && currentPath !== '/portfolio/index.html') {
+        // If we're on a specific page, use that path
+        initialPath = `${baseUrl}${currentPath}`;
+    } else {
+        // Otherwise use stored page or default to About
+        initialPath = getStoredPage() || `${baseUrl}/content/about/content.md`;
+    }
 
     loadContent(initialPath);
-    history.replaceState({path: initialPath}, '', window.location.pathname);
+    history.replaceState({path: initialPath}, '', '/portfolio/');
 
-    // Update sidebar based on stored path
-    if (storedPath) {
-        const link = findNavigationLink(storedPath);
-        if (link) setActiveLink(link);
+    // Update sidebar based on path
+    const link = findNavigationLink(initialPath);
+    if (link) {
+        setActiveLink(link);
     } else {
         const aboutLink = document.querySelector('nav a');
         if (aboutLink) setActiveLink(aboutLink);
     }
-    
 };
 
