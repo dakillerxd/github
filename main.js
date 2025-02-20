@@ -21,7 +21,7 @@ const structure = {
         path: "content/prototypes",
         pages: [
             { title: "Bubblerena", folder: "bubblerena", visible: true },
-            { title: "PopACorn", folder: "popcorn", visible: true },
+            { title: "PopACorn", folder: "popacorn", visible: true },
         ]
     },
 };
