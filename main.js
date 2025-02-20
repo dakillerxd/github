@@ -5,6 +5,7 @@
 const baseUrl = '/portfolio';
 const defaultPath = `${baseUrl}/content/about/content.md`;
 const siteTitle = 'Daniel Noam - Portfolio';
+const defaultShowUrls = true;
 
 // Project structure configuration
 const structure = {
@@ -189,6 +190,31 @@ function initThemeToggle() {
     });
 }
 
+function initUrlToggle() {
+    const urlToggle = document.getElementById('url-toggle');
+    const savedUrlPreference = localStorage.getItem('showUrls');
+    const showUrls = savedUrlPreference !== null ? savedUrlPreference === 'true' : defaultShowUrls;
+
+    document.documentElement.classList.toggle('hide-urls', !showUrls);
+    updateUrlToggle(showUrls);
+
+    urlToggle.addEventListener('click', () => {
+        const showUrls = !document.documentElement.classList.toggle('hide-urls');
+        localStorage.setItem('showUrls', showUrls);
+        updateUrlToggle(showUrls);
+    });
+}
+
+function updateUrlToggle(showUrls) {
+    const urlToggle = document.getElementById('url-toggle');
+    const urlIcon = urlToggle.querySelector('.url-icon');
+    const urlText = urlToggle.querySelector('.url-text');
+
+    urlIcon.textContent = showUrls ? '🔗' : '🔒';
+    urlText.textContent = showUrls ? 'Hide URLs' : 'Show URLs';
+    urlToggle.setAttribute('aria-label', `${showUrls ? 'Hide' : 'Show'} URLs`);
+}
+
 /*==============================================
             MOBILE MENU HANDLING
 ================================================*/
@@ -257,6 +283,16 @@ window.onload = function() {
     initMobileMenu();
     initThemeToggle();
 
+    // Apply URL visibility setting
+    if (!showUrls) {
+        document.documentElement.classList.add('hide-urls');
+    }
+
+    // Apply URL visibility setting
+    if (hideUrls) {
+        document.documentElement.classList.add('hide-urls');
+    }
+
     const currentPath = window.location.pathname;
 
     // Check if we have a state (from back/forward navigation)
@@ -275,4 +311,4 @@ window.onload = function() {
         // Handle direct file access by redirecting to portfolio root
         window.location.href = '/portfolio/';
     }
-};
+}

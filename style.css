@@ -59,6 +59,15 @@
     --link-hover-color: var(--light-link-hover);
 }
 
+/* Url hiding */
+:root.hide-urls a[href^="http"],
+:root.hide-urls a[href^="https"],
+:root.hide-urls a[href^="/"] {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 /*==============================================
                 BASE STYLES
 ================================================*/
