@@ -5,8 +5,10 @@ const baseUrl = '/portfolio';
 const defaultPath = `${baseUrl}/content/about/content.md`;
 const siteTitle = 'Daniel Noam - Portfolio';
 const defaultShowUrls = false;
+const defaultShowTopBar = true;
+const defaultShowThemeToggle = true;
 
-// Project structure configuration
+
 const structure = {
     "GAMES": {
         path: "content/games",
@@ -178,35 +180,62 @@ function updateDocumentTitle(path) {
 /*==============================================
             THEME MANAGEMENT
 ================================================*/
-function initThemeToggle() {
-    const themeToggle = document.getElementById('theme-toggle');
-    const themeIcon = themeToggle.querySelector('.theme-icon');
-    const themeText = themeToggle.querySelector('.theme-text');
 
+function handleThemeToggle() {
+    const isLightMode = document.documentElement.classList.toggle('light-mode');
+    localStorage.setItem('theme', isLightMode ? 'light' : 'dark');
+    updateThemeToggles(isLightMode);
+}
+
+function initThemeToggle() {
+    const sidebarToggle = document.getElementById('theme-toggle');
+    const mobileToggle = document.querySelector('.mobile-theme-toggle');
+    const toggles = [sidebarToggle, mobileToggle];
+
+    // Get the saved theme or use system preference
     const savedTheme = localStorage.getItem('theme');
     const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     const defaultTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
 
+    // Set initial theme
     document.documentElement.classList.toggle('light-mode', defaultTheme === 'light');
-    updateThemeToggle(defaultTheme === 'light');
+    updateThemeToggles(defaultTheme === 'light');
 
-    themeToggle.addEventListener('click', () => {
-        const isLightMode = document.documentElement.classList.toggle('light-mode');
-        localStorage.setItem('theme', isLightMode ? 'light' : 'dark');
-        updateThemeToggle(isLightMode);
+    // Add click handlers to both toggles
+    toggles.forEach(toggle => {
+        if (toggle) {
+            toggle.removeEventListener('click', handleThemeToggle); // Remove any existing listeners
+            toggle.addEventListener('click', handleThemeToggle);
+        }
     });
 
-    function updateThemeToggle(isLight) {
-        themeIcon.textContent = isLight ? '🌙' : '☀️';
-        themeText.textContent = isLight ? 'Dark Mode' : 'Light Mode';
-        themeToggle.setAttribute('aria-label', `Switch to ${isLight ? 'dark' : 'light'} mode`);
-    }
-
+    // Listen for system theme changes
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
         if (!localStorage.getItem('theme')) {
             const isLight = !e.matches;
             document.documentElement.classList.toggle('light-mode', isLight);
-            updateThemeToggle(isLight);
+            updateThemeToggles(isLight);
+        }
+    });
+}
+
+function updateThemeToggles(isLight) {
+    const sidebarToggle = document.getElementById('theme-toggle');
+    const mobileToggle = document.querySelector('.mobile-theme-toggle');
+    const toggles = [sidebarToggle, mobileToggle];
+
+    toggles.forEach(toggle => {
+        if (toggle) {
+            const themeIcon = toggle.querySelector('.theme-icon');
+            const themeText = toggle.querySelector('.theme-text');
+
+            if (themeIcon) {
+                themeIcon.textContent = isLight ? '🌙' : '☀️';
+            }
+            if (themeText && !themeText.classList.contains('sr-only')) {
+                themeText.textContent = `${isLight ? 'Dark' : 'Light'} Mode`;
+            }
+            toggle.setAttribute('aria-label', `${isLight ? 'Dark' : 'Light'} Mode`);
         }
     });
 }
@@ -278,12 +307,26 @@ window.onpopstate = (event) => {
 window.onload = async function() {
     buildNavigation();
     initMobileMenu();
-    initThemeToggle();
 
-    // Apply URL visibility setting
+    // URL visibility setting
     if (!defaultShowUrls) {
         document.documentElement.classList.add('hide-urls');
     }
+
+    // Top bar visibility setting
+    if (defaultShowTopBar) {
+        document.documentElement.classList.add('show-top-bar');
+    }
+
+    // Theme visibility setting
+    if (defaultShowThemeToggle) {
+        document.documentElement.classList.add('show-theme-toggle');
+    } else {
+        document.documentElement.classList.add('hide-theme-toggle');
+    }
+
+    // Initialize theme toggle after visibility is set
+    initThemeToggle();
 
     const currentPath = window.location.pathname;
 
