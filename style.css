@@ -26,11 +26,11 @@
     --dark-link-hover: rgba(255, 255, 255, 1);
 
     /* Light Theme Colors */
-    --light-bg: rgba(200, 200, 200, 1);
+    --light-bg: rgba(224, 228, 242, 255);
     --light-text: rgba(26, 29, 33, 1);
     --light-text-secondary: rgba(102, 102, 102, 1);
-    --light-sidebar-bg: rgba(0, 0, 0, 0.1);
-    --light-card-bg: rgba(0, 0, 0, 0.1);
+    --light-sidebar-bg: rgba(183, 201, 232, 0.1);
+    --light-card-bg: rgba(0, 0, 0, 0.05);
     --light-heading: rgba(42, 122, 223, 1);
     --light-subheading: rgba(74, 158, 255, 1);
     --light-link: rgba(102, 102, 102, 1);
@@ -306,7 +306,7 @@ nav a:not([target="_blank"]).active::before {
     left: 50%;
     transform: translateX(-50%);
     background-color: var(--gallery-image-text-bg);
-    color: var(--text-color);
+    color: rgba(255, 255, 255, 1); /* keep always white */
     padding: 5px 10px;
     border-radius: 4px;
     font-size: 0.9rem;
