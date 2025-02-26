@@ -38,15 +38,41 @@ function setupGalleryImages() {
 
     // Add click event to all gallery images
     galleryLinks.forEach((link, index) => {
-        // Remove existing event listeners and target="_blank" attribute
-        link.removeAttribute('target');
+        // Check if this gallery should have lightbox disabled
+        const gallery = link.closest('.image-gallery');
+        const lightboxDisabled = gallery && gallery.classList.contains('no-lightbox');
 
-        // Create new click handler
-        link.onclick = function(e) {
-            e.preventDefault();
-            openLightbox(index, galleryImages);
-            return false;
-        };
+        if (lightboxDisabled) {
+            // For galleries with lightbox disabled, preserve the link's default behavior
+            // This allows the link to navigate as configured in the href or onclick
+
+            // Make sure we keep any existing onclick handlers
+            if (!link.hasAttribute('data-has-custom-click')) {
+                const originalOnClick = link.onclick;
+                link.setAttribute('data-has-custom-click', 'true');
+
+                // Only preserve the original onclick if it exists
+                if (originalOnClick) {
+                    // No further modification needed for links in no-lightbox galleries
+                    // The original onclick handler will work as intended
+                } else {
+                    // If no onclick exists, make sure the link works normally
+                    link.onclick = null;
+                }
+            }
+        } else {
+            // For regular galleries with lightbox enabled
+
+            // Remove existing target="_blank" attribute
+            link.removeAttribute('target');
+
+            // Create new click handler for lightbox
+            link.onclick = function(e) {
+                e.preventDefault();
+                openLightbox(index, galleryImages);
+                return false;
+            };
+        }
     });
 }
 
@@ -130,6 +156,12 @@ function openLightbox(index, images) {
             case 'Escape':
                 closeLightbox();
                 break;
+            case 'a':
+                prevImage();
+                break
+            case 'd':
+                nextImage();
+                break
         }
     }
 

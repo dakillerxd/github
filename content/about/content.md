@@ -4,7 +4,7 @@
 
 I'm a Game Designer and Programmer who began my journey in game development during high school. My experience spans from modding existing games to creating original adventures using various game engines. My main expertise is in Unity, with additional experience in GameMaker, Blender, Photoshop, Git, and Aseprite.
 
-<div class="image-gallery">
+<div class="image-gallery no-lightbox">
     <figure>
         <a href="#" onclick="handleNavigationClick(`${baseUrl}/content/games/2d-platformer/content.md`, document.querySelector('a[onclick*=\'2d-platformer\']')); return false;">
             <img src="https://danielnoam.github.io/portfolio/assets/2d-platformer/main.gif" alt="2D Platformer">
