@@ -357,3 +357,87 @@ window.onload = async function() {
         `;
     }
 }
+
+/*==============================================
+            SCROLL ANIMATIONS
+================================================*/
+
+// Initialize Intersection Observer for fade-in effects
+function initScrollAnimations() {
+    // Elements to observe for scroll animation
+    const animatedElements = [
+        '.project-card',
+        '.image-gallery figure',
+        '.page-content h1',
+        '.page-content h2',
+        '.page-content p',
+        '.page-content img'
+    ];
+
+    // Create single reusable IntersectionObserver
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            // Add the 'visible' class when element enters viewport
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                // Once the animation has played, we can stop observing the element
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        root: null, // viewport
+        threshold: 0.1, // trigger when 10% of the element is visible
+        rootMargin: '0px 0px -50px 0px' // slightly before element enters viewport
+    });
+
+    // Apply animations to elements after content loads
+    function setupAnimations() {
+        // Query all elements we want to animate
+        animatedElements.forEach(selector => {
+            const elements = document.querySelectorAll(selector);
+
+            // Add fade-in class and observe each element
+            elements.forEach((el, index) => {
+                // Skip elements that already have animations
+                if (!el.classList.contains('fade-in')) {
+                    el.classList.add('fade-in');
+
+                    // Add staggered delay for elements of the same type
+                    const delayClass = `fade-in-delay-${index % 3 + 1}`;
+                    el.classList.add(delayClass);
+
+                    // Start observing the element
+                    observer.observe(el);
+                }
+            });
+        });
+    }
+
+    // Apply animations when new content is loaded
+    const contentElement = document.getElementById('content');
+    if (contentElement) {
+        // Use MutationObserver to detect when new content is loaded
+        const contentObserver = new MutationObserver(() => {
+            // Short delay to ensure DOM is fully updated
+            setTimeout(setupAnimations, 100);
+        });
+
+        contentObserver.observe(contentElement, { childList: true, subtree: true });
+
+        // Also run once on initial page load
+        setupAnimations();
+    }
+}
+
+const existingOnload = window.onload;
+window.onload = function() {
+    // Call the existing onload function
+    if (typeof existingOnload === 'function') {
+        existingOnload();
+    }
+
+    // Initialize scroll animations
+    initScrollAnimations();
+};
+    
+    
