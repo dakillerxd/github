@@ -333,73 +333,6 @@ function initScrollAnimations() {
 }
 
 /*==============================================
-            CLICK ANIMATION FUNCTIONALITY
-================================================*/
-function initClickAnimations() {
-    // Elements to apply click animations to
-    const animatedElements = [
-        '.theme-toggle',
-        '.menu-toggle',
-        '.image-gallery figure a',
-        '#back-to-top',
-        'nav a'
-    ];
-
-    // Add click-animate class to all target elements
-    animatedElements.forEach(selector => {
-        document.querySelectorAll(selector).forEach(element => {
-            element.classList.add('click-animate');
-        });
-    });
-
-    // Create and apply ripple effect on click
-    document.addEventListener('click', function(event) {
-        // Check if the clicked element or its parent has the click-animate class
-        const targetElement = event.target.closest('.click-animate');
-
-        if (targetElement) {
-            // Create ripple element
-            const ripple = document.createElement('span');
-            ripple.classList.add('ripple');
-
-            // Get position relative to the target
-            const rect = targetElement.getBoundingClientRect();
-            const x = event.clientX - rect.left;
-            const y = event.clientY - rect.top;
-
-            // Set ripple position and size
-            ripple.style.left = `${x}px`;
-            ripple.style.top = `${y}px`;
-
-            // Add ripple to target
-            targetElement.appendChild(ripple);
-
-            // Remove ripple after animation completes
-            setTimeout(() => {
-                ripple.remove();
-            }, 600);
-        }
-    });
-
-    // When new content is loaded, we need to apply the classes again
-    const contentElement = document.getElementById('content');
-    if (contentElement) {
-        // Use MutationObserver to detect when new content is loaded
-        const contentObserver = new MutationObserver(() => {
-            // Short delay to ensure DOM is fully updated
-            setTimeout(() => {
-                // Only apply to gallery items within the content area
-                document.querySelectorAll('.image-gallery figure a').forEach(element => {
-                    element.classList.add('click-animate');
-                });
-            }, 100);
-        });
-
-        contentObserver.observe(contentElement, { childList: true, subtree: true });
-    }
-}
-
-/*==============================================
             SCROLL TO TOP FUNCTIONALITY
 ================================================*/
 function initScrollToTop() {
@@ -507,7 +440,6 @@ window.onload = async function() {
     // Initialize core functionality
     await init();
 
-    // Initialize animations after content is loaded
+    // Initialize scroll animations after content is loaded
     initScrollAnimations();
-    initClickAnimations();
 };
