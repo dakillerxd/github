@@ -228,7 +228,7 @@ nav a:not([target="_blank"]).active::before {
     gap: 4px;
 }
 
-#content a[target="_blank"]:after {
+#content a[target="_blank"]:not(.image-gallery a):after {
     content: '↗';
     font-size: 0.8em;
     opacity: 0.7;
