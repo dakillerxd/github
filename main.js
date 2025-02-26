@@ -26,7 +26,7 @@ const structure = {
             { title: "PopACorn", folder: "popacorn", visible: false },
         ]
     },
-      "Art": {
+    "Art": {
         path: "content/art",
         pages: [
             { title: "Shaders", folder: "shaders", visible: false },
@@ -180,11 +180,31 @@ function updateDocumentTitle(path) {
 /*==============================================
             THEME MANAGEMENT
 ================================================*/
-
 function handleThemeToggle() {
     const isLightMode = document.documentElement.classList.toggle('light-mode');
     localStorage.setItem('theme', isLightMode ? 'light' : 'dark');
     updateThemeToggles(isLightMode);
+}
+
+function updateThemeToggles(isLight) {
+    const sidebarToggle = document.getElementById('theme-toggle');
+    const mobileToggle = document.querySelector('.mobile-theme-toggle');
+    const toggles = [sidebarToggle, mobileToggle];
+
+    toggles.forEach(toggle => {
+        if (toggle) {
+            const themeIcon = toggle.querySelector('.theme-icon');
+            const themeText = toggle.querySelector('.theme-text');
+
+            if (themeIcon) {
+                themeIcon.textContent = isLight ? '🌙' : '☀️';
+            }
+            if (themeText && !themeText.classList.contains('sr-only')) {
+                themeText.textContent = `${isLight ? 'Dark' : 'Light'} Mode`;
+            }
+            toggle.setAttribute('aria-label', `${isLight ? 'Dark' : 'Light'} Mode`);
+        }
+    });
 }
 
 function initThemeToggle() {
@@ -219,28 +239,6 @@ function initThemeToggle() {
     });
 }
 
-function updateThemeToggles(isLight) {
-    const sidebarToggle = document.getElementById('theme-toggle');
-    const mobileToggle = document.querySelector('.mobile-theme-toggle');
-    const toggles = [sidebarToggle, mobileToggle];
-
-    toggles.forEach(toggle => {
-        if (toggle) {
-            const themeIcon = toggle.querySelector('.theme-icon');
-            const themeText = toggle.querySelector('.theme-text');
-
-            if (themeIcon) {
-                themeIcon.textContent = isLight ? '🌙' : '☀️';
-            }
-            if (themeText && !themeText.classList.contains('sr-only')) {
-                themeText.textContent = `${isLight ? 'Dark' : 'Light'} Mode`;
-            }
-            toggle.setAttribute('aria-label', `${isLight ? 'Dark' : 'Light'} Mode`);
-        }
-    });
-}
-
-
 /*==============================================
             MOBILE MENU HANDLING
 ================================================*/
@@ -266,103 +264,8 @@ function initMobileMenu() {
 }
 
 /*==============================================
-            SCROLL TO TOP FUNCTIONALITY
-================================================*/
-window.onscroll = function() {
-    const button = document.getElementById("back-to-top");
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        button.style.display = "block";
-    } else {
-        button.style.display = "none";
-    }
-};
-
-document.getElementById("back-to-top").onclick = function() {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-};
-
-/*==============================================
-            BROWSER HISTORY HANDLING
-================================================*/
-window.onpopstate = (event) => {
-    if (event.state && event.state.path) {
-        loadContent(event.state.path);
-        const link = findNavigationLink(event.state.path);
-        if (link) setActiveLink(link);
-    } else {
-        // If no state, go to About page
-        
-        loadContent(defaultPath);
-        const aboutLink = document.querySelector('nav a');
-        if (aboutLink) setActiveLink(aboutLink);
-    }
-};
-
-/*==============================================
-            INITIALIZATION
-================================================*/
-window.onload = async function() {
-    buildNavigation();
-    initMobileMenu();
-
-    // URL visibility setting
-    if (!defaultShowUrls) {
-        document.documentElement.classList.add('hide-urls');
-    }
-
-    // Top bar visibility setting
-    if (defaultShowTopBar) {
-        document.documentElement.classList.add('show-top-bar');
-    }
-
-    // Theme visibility setting
-    if (defaultShowThemeToggle) {
-        document.documentElement.classList.add('show-theme-toggle');
-    } else {
-        document.documentElement.classList.add('hide-theme-toggle');
-    }
-
-    // Initialize theme toggle after visibility is set
-    initThemeToggle();
-
-    const currentPath = window.location.pathname;
-
-    try {
-        // Check if we have a state (from back/forward navigation)
-        if (history.state && history.state.path) {
-            await loadContent(history.state.path);
-            const link = findNavigationLink(history.state.path);
-            if (link) setActiveLink(link);
-        }
-        // If we're at the root or direct file access, load About
-        else if (currentPath === '/portfolio/' || currentPath === '/portfolio/index.html') {
-            await loadContent(defaultPath);
-            history.replaceState({path: defaultPath}, '', '/portfolio/');
-            const aboutLink = document.querySelector('nav a');
-            if (aboutLink) setActiveLink(aboutLink);
-        } else {
-            // Handle direct file access by redirecting to portfolio root
-            window.location.href = '/portfolio/';
-        }
-    } catch (error) {
-        console.error('Error during initialization:', error);
-        document.getElementById('content').innerHTML = `
-            <div class="error-message">
-                <h1>Error Loading Content</h1>
-                <p>Sorry, there was an error loading the initial content.</p>
-            </div>
-        `;
-    }
-}
-
-/*==============================================
             SCROLL ANIMATIONS
 ================================================*/
-
-// Initialize Intersection Observer for fade-in effects
 function initScrollAnimations() {
     // Elements to observe for scroll animation
     const animatedElements = [
@@ -429,15 +332,182 @@ function initScrollAnimations() {
     }
 }
 
-const existingOnload = window.onload;
-window.onload = function() {
-    // Call the existing onload function
-    if (typeof existingOnload === 'function') {
-        existingOnload();
+/*==============================================
+            CLICK ANIMATION FUNCTIONALITY
+================================================*/
+function initClickAnimations() {
+    // Elements to apply click animations to
+    const animatedElements = [
+        '.theme-toggle',
+        '.menu-toggle',
+        '.image-gallery figure a',
+        '#back-to-top',
+        'nav a'
+    ];
+
+    // Add click-animate class to all target elements
+    animatedElements.forEach(selector => {
+        document.querySelectorAll(selector).forEach(element => {
+            element.classList.add('click-animate');
+        });
+    });
+
+    // Create and apply ripple effect on click
+    document.addEventListener('click', function(event) {
+        // Check if the clicked element or its parent has the click-animate class
+        const targetElement = event.target.closest('.click-animate');
+
+        if (targetElement) {
+            // Create ripple element
+            const ripple = document.createElement('span');
+            ripple.classList.add('ripple');
+
+            // Get position relative to the target
+            const rect = targetElement.getBoundingClientRect();
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
+
+            // Set ripple position and size
+            ripple.style.left = `${x}px`;
+            ripple.style.top = `${y}px`;
+
+            // Add ripple to target
+            targetElement.appendChild(ripple);
+
+            // Remove ripple after animation completes
+            setTimeout(() => {
+                ripple.remove();
+            }, 600);
+        }
+    });
+
+    // When new content is loaded, we need to apply the classes again
+    const contentElement = document.getElementById('content');
+    if (contentElement) {
+        // Use MutationObserver to detect when new content is loaded
+        const contentObserver = new MutationObserver(() => {
+            // Short delay to ensure DOM is fully updated
+            setTimeout(() => {
+                // Only apply to gallery items within the content area
+                document.querySelectorAll('.image-gallery figure a').forEach(element => {
+                    element.classList.add('click-animate');
+                });
+            }, 100);
+        });
+
+        contentObserver.observe(contentElement, { childList: true, subtree: true });
+    }
+}
+
+/*==============================================
+            SCROLL TO TOP FUNCTIONALITY
+================================================*/
+function initScrollToTop() {
+    window.onscroll = function() {
+        const button = document.getElementById("back-to-top");
+        if (button) {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                button.style.display = "block";
+            } else {
+                button.style.display = "none";
+            }
+        }
+    };
+
+    const backToTopButton = document.getElementById("back-to-top");
+    if (backToTopButton) {
+        backToTopButton.onclick = function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        };
+    }
+}
+
+/*==============================================
+            BROWSER HISTORY HANDLING
+================================================*/
+function initHistoryHandling() {
+    window.onpopstate = (event) => {
+        if (event.state && event.state.path) {
+            loadContent(event.state.path);
+            const link = findNavigationLink(event.state.path);
+            if (link) setActiveLink(link);
+        } else {
+            // If no state, go to About page
+            loadContent(defaultPath);
+            const aboutLink = document.querySelector('nav a');
+            if (aboutLink) setActiveLink(aboutLink);
+        }
+    };
+}
+
+/*==============================================
+            INITIALIZATION
+================================================*/
+async function init() {
+    // Set up navigation structure
+    buildNavigation();
+
+    // Initialize UI components
+    initMobileMenu();
+    initThemeToggle();
+    initScrollToTop();
+    initHistoryHandling();
+
+    // Apply visibility settings
+    if (!defaultShowUrls) {
+        document.documentElement.classList.add('hide-urls');
     }
 
-    // Initialize scroll animations
+    if (defaultShowTopBar) {
+        document.documentElement.classList.add('show-top-bar');
+    }
+
+    if (defaultShowThemeToggle) {
+        document.documentElement.classList.add('show-theme-toggle');
+    } else {
+        document.documentElement.classList.add('hide-theme-toggle');
+    }
+
+    // Handle content loading based on URL
+    const currentPath = window.location.pathname;
+
+    try {
+        // Check if we have a state (from back/forward navigation)
+        if (history.state && history.state.path) {
+            await loadContent(history.state.path);
+            const link = findNavigationLink(history.state.path);
+            if (link) setActiveLink(link);
+        }
+        // If we're at the root or direct file access, load About
+        else if (currentPath === '/portfolio/' || currentPath === '/portfolio/index.html') {
+            await loadContent(defaultPath);
+            history.replaceState({path: defaultPath}, '', '/portfolio/');
+            const aboutLink = document.querySelector('nav a');
+            if (aboutLink) setActiveLink(aboutLink);
+        } else {
+            // Handle direct file access by redirecting to portfolio root
+            window.location.href = '/portfolio/';
+        }
+    } catch (error) {
+        console.error('Error during initialization:', error);
+        document.getElementById('content').innerHTML = `
+            <div class="error-message">
+                <h1>Error Loading Content</h1>
+                <p>Sorry, there was an error loading the initial content.</p>
+            </div>
+        `;
+    }
+}
+
+// Main window.onload function - entry point for the application
+window.onload = async function() {
+    // Initialize core functionality
+    await init();
+
+    // Initialize animations after content is loaded
     initScrollAnimations();
+    initClickAnimations();
 };
-    
-    

@@ -612,3 +612,39 @@ nav a:not([target="_blank"]).active::before {
 :root:not(.show-theme-toggle) .menu-toggle {
     display: block;
 }
+
+.ripple {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple-animation 0.6s linear;
+    pointer-events: none;
+}
+
+@keyframes ripple-animation {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* Apply to specific elements */
+.theme-toggle,
+.menu-toggle,
+.image-gallery figure a,
+#back-to-top,
+nav a {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Optional hover lift effect for gallery images  */
+.image-gallery figure a {
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.image-gallery figure a:active {
+    transform: scale(0.98);
+}
