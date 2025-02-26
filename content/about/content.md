@@ -2,7 +2,7 @@
 
 # ABOUT
 
-I'm a Game Designer and Programmer who began my journey in game development during high school. My experience spans from modding existing games to creating original adventures using various game engines. With expertise in Unity, GameMaker, Blender, Photoshop, Git, and Aseprite.
+I'm a Game Designer and Programmer who began my journey in game development during high school. My experience spans from modding existing games to creating original adventures using various game engines. My main expertise is in Unity, with additional experience in GameMaker, Blender, Photoshop, Git, and Aseprite.
 
 <div class="image-gallery">
     <figure>
